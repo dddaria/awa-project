@@ -1,1 +1,80 @@
-hejsan 
+<?php 
+
+include('config.php');
+include('connect.php');?>
+<style>
+<?php include 'index.css'; ?>
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+<!---MY CSS LINKS--->
+	<link href="index.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="index.css">
+<!-- Fonts -->	
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+<!-- For responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bookclub</title>
+</head>
+<body>
+	
+	<header>
+			<div id="topnavDIV">
+				<ol class="top-nav">
+					<li>
+					<div class="logodiv">
+					<a href="index.php"><img src="img/logo.png" class="logoheader" class="<?php 
+					// current or '' because it is the Index page
+					echo($currentPage == 'index.php' || $currentPage == '') ? 'activelink' :''?>"> </a>
+					</div>
+					</li>
+                    <li>
+						<h1><a href="popular-destinations.php" class="<?php
+						echo ($currentPage == 'popular-destinations.php')?'activelink' :''
+						?>">Popular </a> </h1>
+					</li>
+					<li>
+						<h1><a href="all-destinations.php"  class="<?php echo($currentPage == 'all-destinations.php') ? 'activelink' :''?>">All Destinations</a></h1>
+                    </li>
+                    <li>
+						<h1><a href="random-destination.php" class="<?php
+						echo ($currentPage == 'andom-destination.php' )?'activelink' :''
+						?>">About Us</a></h1>
+					</li>
+
+					<li>
+						<h1><a href="about-us.php" class="<?php
+						echo ($currentPage == 'about-us.php' )?'activelink' :''
+						?>">About Us</a></h1>
+					</li>
+				
+			
+					<li>
+						<div class="search-container">
+						<form action="">
+						<input type="text" placeholder="Search.." name="search">
+						<!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+						</form>
+					</div>
+					</li>
+                    <li>
+						<h1><a href="login.php" class="<?php
+						echo ($currentPage == 'login.php' )?'activelink' :''
+						?>">Log in</a></h1>
+					</li>
+					
+					<li>
+					<div class="favorites">
+						<img src="img/favorite-icon.png" class="cartImage"/>	
+					</div>
+					</li>
+				</ol>
+			</div> <!-- end of header div -->
+		</header>	
+</body>
