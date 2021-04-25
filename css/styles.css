@@ -1,0 +1,143 @@
+
+/***********GENERAL*********************/
+
+body {
+	width:100%;
+	margin: 0 auto;
+	font-family: 'Bebas-Neue', sans-serif;
+}
+main {
+	max-width: 960px;
+	margin: 0 auto;
+	min-width: 300px;
+}
+a {
+	color:#e0d0ae;
+	padding: 1vw;
+	margin: 0 auto;
+	text-decoration: none;
+}
+
+/***********Header*********************/
+header {	
+    height:7vw;
+    background-color: #8c7e73 ;
+    box-shadow: 0px 5px 20px 5px #584f4870;
+}
+#topnavDIV{
+    width: 100%;	
+}
+
+.top-nav {
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.top-nav li {
+    line-height:5vw;
+    float:left;
+    margin-top: 1%;	
+    text-transform: uppercase;
+}
+
+.top-nav h1 {
+    font-size: 1.5vw;
+    margin:auto 0;	
+}
+
+.top-nav a {
+    text-decoration: one;
+    color: #e0d0ae ;
+}
+.activelink{
+    color:#233746 !important;
+}
+
+.fav-icon {
+    max-width:100%;
+    height:auto;
+}
+.logoheader {
+    max-width: 100%;
+    height: auto;
+}
+
+.logodiv {
+    width:5vw;
+    float: left;
+    padding-right: 2vw;
+}
+
+.fav-div {
+    width:5vw;
+    float: left;
+    padding-right: 2vw;
+}
+
+/* .search-container button {
+    float:right;
+    margin: 6.5% 11% 0% 0%;
+    background: #ddd;
+    font-size: 1.35vw;
+    border: none;
+    cursor: pointer;
+    padding:3%;
+    width:13%;
+} */
+
+.search-container button:hover {
+  background: #ccc;
+  
+}
+
+.search-container input[type=text] {
+  padding: 3%;
+  margin: 6.5% 0% 0% -10%;
+  font-size: 1.35vw;
+  border: solid;
+  border-color: #e0d0ae ;
+  border-radius: 5%;
+}
+
+.search-container {
+    padding-left:2vw;
+    width:100%;
+   
+}
+
+.cartImage {
+    max-width:100%;
+    height:auto;
+    margin: 0% 0% 0% 100%;
+}
+
+.cart {
+    width:3vw;
+    float:right;
+    margin: 30% 0% 0% 0%;
+}
+/******** Footer ************/
+footer {
+background-color: #8c7e73 ;
+box-shadow: 0px -5px 20px 5px #584f4870;	
+width:100%; 	
+float:left;
+bottom:0;
+margin-top:15vw;
+}
+
+.footertext {
+text-align:center;
+}
+
+.footertext h4 {
+ color: #e0d0ae ;
+text-align:center;
+font-size:1.3vw;
+}
+
+.footertext img {
+width:8%;
+}
+

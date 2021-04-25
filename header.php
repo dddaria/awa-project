@@ -1,7 +1,4 @@
-<?php 
 
-include('config.php');
-include('connect.php');?>
 <style>
 <?php include 'index.css'; ?>
 </style>
@@ -12,15 +9,16 @@ include('connect.php');?>
 	<meta charset="utf-8">
 
 <!---MY CSS LINKS--->
-	<link href="index.css" rel="stylesheet" type="text/css"/>
+	<link href="css/styles.css" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" type="text/css" href="index.css">
 <!-- Fonts -->	
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <!-- For responsive -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Bookclub</title>
+	<title>Explore & More</title>
 </head>
 <body>
 	
@@ -29,7 +27,8 @@ include('connect.php');?>
 				<ol class="top-nav">
 					<li>
 					<div class="logodiv">
-					<a href="index.php"><img src="img/logo.png" class="logoheader" class="<?php 
+					<a href="index.php"><img src="img/logo.png" class="logoheader" class="
+                    <?php 
 					// current or '' because it is the Index page
 					echo($currentPage == 'index.php' || $currentPage == '') ? 'activelink' :''?>"> </a>
 					</div>
@@ -44,8 +43,8 @@ include('connect.php');?>
                     </li>
                     <li>
 						<h1><a href="random-destination.php" class="<?php
-						echo ($currentPage == 'andom-destination.php' )?'activelink' :''
-						?>">About Us</a></h1>
+						echo ($currentPage == 'random-destination.php' )?'activelink' :''
+						?>">Randomize</a></h1>
 					</li>
 
 					<li>
@@ -53,26 +52,27 @@ include('connect.php');?>
 						echo ($currentPage == 'about-us.php' )?'activelink' :''
 						?>">About Us</a></h1>
 					</li>
-				
 			
 					<li>
 						<div class="search-container">
 						<form action="">
 						<input type="text" placeholder="Search.." name="search">
-						<!-- <button type="submit"><i class="fa fa-search"></i></button> -->
 						</form>
 					</div>
 					</li>
-                    <li>
+					
+					<li>
+                        <div class="fav-div">
+					<a href="favorite-destinations.php"><img src="img/favorite-icon.png" class="fav-icon" class="
+                    <?php
+						echo ($currentPage == 'favorite-destinations.php' )?'activelink' :''
+						?>"> </a>
+                        </div>
+					<li>
 						<h1><a href="login.php" class="<?php
 						echo ($currentPage == 'login.php' )?'activelink' :''
 						?>">Log in</a></h1>
 					</li>
-					
-					<li>
-					<div class="favorites">
-						<img src="img/favorite-icon.png" class="cartImage"/>	
-					</div>
 					</li>
 				</ol>
 			</div> <!-- end of header div -->
