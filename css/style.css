@@ -42,7 +42,7 @@ header {
 }
 
 .top-nav h1 {
-    font-size: 1.5vw;
+    font-size: 1vw;
     margin:auto 0;	
 }
 
@@ -52,6 +52,13 @@ header {
 }
 .activelink{
     color:#664430 !important;
+}
+.header_right{
+padding-right: 2vw;
+}
+
+.header_left{
+    padding-left: 2vw;
 }
 
 .fav-icon {
