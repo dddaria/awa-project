@@ -33,6 +33,9 @@ header {
     margin: 0 auto;
     list-style: none;
 }
+#topnavDIV ol {
+padding-inline-start: 0px !important;
+}
 
 .top-nav li {
     line-height:5vw;
@@ -54,11 +57,17 @@ header {
     color:#664430 !important;
 }
 .header_right{
-padding-right: 2vw;
+    padding-right: 4vw;
+    display: inline-block;
+   
 }
-
+.header_middle{
+    display: inline-block;
+    
+}
 .header_left{
-    padding-left: 2vw;
+    padding-left: 6vw;
+    display: inline-block;
 }
 
 .fav-icon {

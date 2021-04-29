@@ -1,1 +1,5 @@
-hejsan hoppsan lillebror jag ger upp
+<?php 
+include('header.php');?>
+
+<?php 
+include('footer.php');?>
