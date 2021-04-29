@@ -22,7 +22,7 @@ a {
 header {	
     height:7vw;
     background-color: #c4cdc1 ;
-    box-shadow: 0px 5px 20px 5px #584f4870;
+    box-shadow: 0px 5px 20px 5px #495f4b70;
 }
 #topnavDIV{
     width: 100%;	
@@ -136,7 +136,7 @@ padding-inline-start: 0px !important;
 /******** Footer ************/
 footer {
 background-color: #c4cdc1 ;
-box-shadow: 0px -5px 20px 5px #584f4870;	
+box-shadow: 0px -5px 20px 5px #495f4b70;	
 width:100%; 	
 float:left;
 bottom:0;
