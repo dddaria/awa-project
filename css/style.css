@@ -156,4 +156,41 @@ font-size:1.3vw;
 .footertext img {
 width:8%;
 }
+/******** Destination browse ************/
+.destination-main {
+	max-width: 960px;
+	margin: 0 auto;
+	min-width: 300px;
+	
+}
+.all-destinations-ol{
+    list-style-type: none;
+}
+.destination-img-div {
+    position: relative;
+}
 
+.destination-img {
+    display:block;
+    max-height: 250px;
+}
+
+.destination-li{
+	float: left;
+	width: calc(25% - 40px);
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+	/*border: 2px #eeeeee solid;*/
+	list-style: none;
+}
+
+.destination-li a {
+	text-decoration: none;
+	color: black;
+	font-family: 'News Cycle', sans-serif;
+}
+
+.destination-li:nth-child(4n + 1){
+	clear: left;
+}
