@@ -21,7 +21,7 @@ a {
 /***********Header*********************/
 header {	
     height:7vw;
-    background-color: #8c7e73 ;
+    background-color: #c4cdc1 ;
     box-shadow: 0px 5px 20px 5px #584f4870;
 }
 #topnavDIV{
@@ -51,7 +51,7 @@ padding-inline-start: 0px !important;
 
 .top-nav a {
     text-decoration: one;
-    color: #e0d0ae ;
+    color: #658b6f ;
 }
 .activelink{
     color:#664430 !important;
@@ -135,7 +135,7 @@ padding-inline-start: 0px !important;
 }
 /******** Footer ************/
 footer {
-background-color: #8c7e73 ;
+background-color: #c4cdc1 ;
 box-shadow: 0px -5px 20px 5px #584f4870;	
 width:100%; 	
 float:left;
