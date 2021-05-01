@@ -156,3 +156,12 @@ font-size:1.3vw;
 .footertext img {
 width:8%;
 }
+/********Destination********/
+.destination-img{
+width: 50%;
+display: inline-block;
+}
+.destination-text-div{
+width: 50%;
+display: inline-block;
+}
