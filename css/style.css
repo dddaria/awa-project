@@ -6,10 +6,12 @@ body {
 	margin: 0 auto;
 	font-family: 'Bebas-Neue', sans-serif;
 }
+
 main {
 	max-width: 960px;
 	margin: 0 auto;
 	min-width: 300px;
+    padding: 60px 0px;
 }
 a {
 	color:#e0d0ae;
@@ -133,6 +135,7 @@ padding-inline-start: 0px !important;
     float:right;
     margin: 30% 0% 0% 0%;
 }
+
 /******** Footer ************/
 footer {
 background-color: #c4cdc1 ;
@@ -155,4 +158,29 @@ font-size:1.3vw;
 
 .footertext img {
 width:8%;
+}
+
+/*********** Random destination *********************/
+.randomize {
+    text-align: center;
+}
+
+#randomize-btn {
+    padding: 15px 20px;
+    margin: 0 auto;
+    margin-top: 15px;
+    line-height: 1.4em;
+    border: none;
+    border-radius: 8px;
+    background-color: #658b6f;
+    font-weight: bold;
+    color: #fff;
+}
+
+#randomize-btn:hover {
+    background-color: #93caa2;
+}
+
+#random-destination {
+    display: none;
 }
