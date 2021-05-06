@@ -195,12 +195,6 @@ padding-inline-start: 0px !important;
 }
 
 /******** All Destinations ************/
-
-.img-fix {
-  width: 100%;
-  margin-bottom: 15px;
-} 
-
 main .destGrid{
     text-align: center;
     max-width:100% !important;
@@ -225,7 +219,10 @@ main .destGrid{
   .img-fix {
     transition: transform .7s;
     position: relative;
-    margin: 0;
+    margin: 0 0 15px 0;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
   }
 
   .img-fix:hover {
