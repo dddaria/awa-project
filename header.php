@@ -4,8 +4,7 @@
 <meta charset="utf-8">
 
 <!---MY CSS LINKS--->
-<link href="css/style.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
 <!-- Fonts -->	
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -80,4 +79,3 @@
 				</ol>
 			</div> <!-- end of header div -->
 		</header>	
-</body>
