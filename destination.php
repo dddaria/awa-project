@@ -1,7 +1,7 @@
 <?php 
-include('header.php');?>
+include('header.php');
+    ?>
 <body>
-    
 <div class="destination-div">
         <!-- <?php
         echo "<div class='destination-img'> $destinationImg </div>";
@@ -20,6 +20,7 @@ include('header.php');?>
         </div>
    
 </div>
+
 </body>
 <?php 
 include('footer.php');?>
