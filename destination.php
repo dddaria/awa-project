@@ -1,6 +1,6 @@
 <?php 
 include('header.php');  ?>
-<body>
+
 <div class="destination-div">
         <!-- <?php
         echo "<div class='destination-img'> $destinationImg </div>";
@@ -20,11 +20,10 @@ include('header.php');  ?>
    
 </div>
 
-</body>
+
 <?php 
 include('footer.php');?>
 =======
 <?php include('header.php');?>
 
 <?php include('footer.php');?>
->>>>>>> 3ff424d14de8e28c66ee158697ad324e3c1ba9f7
