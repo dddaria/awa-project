@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 
 <!---MY CSS LINKS--->
-	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
 <!-- Fonts -->	
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
