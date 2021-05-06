@@ -4,8 +4,12 @@
 <meta charset="utf-8">
 
 <!---MY CSS LINKS--->
+<<<<<<< HEAD
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+=======
 <link href="css/style.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="index.css">
+>>>>>>> 3ff424d14de8e28c66ee158697ad324e3c1ba9f7
 <!-- Fonts -->	
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">

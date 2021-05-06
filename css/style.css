@@ -159,6 +159,17 @@ font-size:1.3vw;
 .footertext img {
 width:8%;
 }
+<<<<<<< HEAD
+/********Destination********/
+.destination-img{
+width: 50%;
+display: inline-block;
+}
+.destination-text-div{
+width: 50%;
+display: inline-block;
+}
+=======
 
 /*********** Random destination *********************/
 .randomize {
@@ -184,3 +195,4 @@ width:8%;
 #random-destination {
     display: none;
 }
+>>>>>>> 3ff424d14de8e28c66ee158697ad324e3c1ba9f7
