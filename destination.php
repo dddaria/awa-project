@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 <?php 
-include('header.php');
-    ?>
+include('header.php');  ?>
 <body>
 <div class="destination-div">
         <!-- <?php
