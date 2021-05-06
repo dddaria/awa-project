@@ -323,29 +323,7 @@ input[type=submit]:hover {
   opacity: 0.7;
 }
 
-/******** Footer ************/
-footer {
-background-color: #c4cdc1 ;
-box-shadow: 0px -5px 20px 5px #495f4b70;	
-width:100%; 	
-float:left;
-bottom:0;
-margin-top:15vw;
-}
 
-.footertext {
-text-align:center;
-}
-
-.footertext h4 {
- color: #658b6f ;
-text-align:center;
-font-size:1.3vw;
-}
-
-.footertext img {
-width:8%;
-}
 
 /********Destination********/
 .destination-img{
@@ -381,3 +359,27 @@ display: inline-block;
 #random-destination {
     display: none;
 }
+
+/******** Footer ************/
+footer {
+  background-color: #c4cdc1 ;
+  box-shadow: 0px -5px 20px 5px #495f4b70;	
+  width:100%; 	
+  float:left;
+  bottom:0;
+  margin-top:15vw;
+  }
+  
+  .footertext {
+  text-align:center;
+  }
+  
+  .footertext h4 {
+   color: #658b6f ;
+  text-align:center;
+  font-size:1.3vw;
+  }
+  
+  .footertext img {
+  width:8%;
+  }
