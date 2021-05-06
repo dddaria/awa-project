@@ -4,7 +4,7 @@
 $host = "localhost";
 $user = "root"; //name of the DB user
 $password = ""; //password of the DB user
-$database = "destinationDB"; //database name
+$database = "destinationdb"; //database name
 
 //Connecting to database
 $dbConn = mysqli_connect($host, $user, $password, $database);
