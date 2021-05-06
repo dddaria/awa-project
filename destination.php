@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 include('header.php');
     ?>
@@ -24,3 +25,8 @@ include('header.php');
 </body>
 <?php 
 include('footer.php');?>
+=======
+<?php include('header.php');?>
+
+<?php include('footer.php');?>
+>>>>>>> 3ff424d14de8e28c66ee158697ad324e3c1ba9f7
