@@ -5,3 +5,4 @@
 		<h4> &copy; 2021 | Explore & More </h4>
 	</div>
 </footer>
+</body>
