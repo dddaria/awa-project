@@ -232,23 +232,11 @@ main .destGrid{
     transform: scale(1.02);
   }
 
-
-
-  
-
-
 /******** Login Page ************/
-
-
-
 .loginBox{
     padding-top:130px;
     width:50%;
     margin:auto;
-}
-
-.LoginForm{
-   
 }
 
 .LoginForm input[type=text], select, textarea {
