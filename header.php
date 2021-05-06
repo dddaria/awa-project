@@ -79,4 +79,3 @@
 				</ol>
 			</div> <!-- end of header div -->
 		</header>	
-</body>
