@@ -13,11 +13,16 @@ main {
 	min-width: 300px;
     padding: 60px 0px;
 }
+
 a {
 	color:#e0d0ae;
 	padding: 1vw;
 	margin: 0 auto;
 	text-decoration: none;
+}
+
+.warning {
+  color: red;
 }
 
 /***********Header*********************/

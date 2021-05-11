@@ -79,4 +79,5 @@
 					</div>
 				</ol>
 			</div> <!-- end of header div -->
-		</header>	
+		</header>
+<?php include ('config.php'); ?>
