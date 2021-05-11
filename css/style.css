@@ -8,10 +8,10 @@ body {
 }
 
 main {
-	max-width: 960px;
 	margin: 0 auto;
 	min-width: 300px;
-    padding: 60px 0px;
+  width: 80%;
+  margin-top: 50px;
 }
 
 a {
@@ -241,7 +241,7 @@ main .destGrid{
     margin:auto;
 }
 
-.LoginForm input[type=text], select, textarea {
+.LoginForm input[type=text]{
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -251,7 +251,8 @@ main .destGrid{
   margin-bottom: 16px;
   resize: vertical;
 }
-.LoginForm input[type=password], select, textarea {
+
+.LoginForm input[type=password] {
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -290,7 +291,7 @@ input[type=submit]:hover {
 
 /******** Sign Up ************/
 
-.SignUpForm input[type=text], select, textarea {
+.SignUpForm input[type=text], select {
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -300,7 +301,7 @@ input[type=submit]:hover {
   margin-bottom: 16px;
   resize: vertical;
 }
-.SignUpForm input[type=password], select, textarea {
+.SignUpForm input[type=password], select {
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -332,6 +333,7 @@ input[type=submit]:hover {
 width: 50%;
 display: inline-block;
 }
+
 .destination-text-div{
 width: 50%;
 display: inline-block;
@@ -361,6 +363,44 @@ display: inline-block;
 #random-destination {
     display: none;
 }
+
+/******** Upload Destination ************/
+#destinationUpload {
+  width: 60%;
+}
+
+#destinationUpload label{
+  font-size: 1em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#destName, #destDes, #destCity {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  font-family: 'Bebas-Neue', sans-serif;
+  font-size: 0.9em;
+  margin-bottom: 40px;
+}
+
+#destDes {
+  height: 4em;
+}
+
+#destinationUpload button {
+  padding: 14px 20px;
+  margin: 40px 0px;
+  border: none;
+  border-radius: 8px;
+  background-color: #658b6f;
+  color: #fff;
+}
+
+#destinationUpload button:hover {
+  background-color: #93caa2;
+}
+
 
 /******** Footer ************/
 footer {

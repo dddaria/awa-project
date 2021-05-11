@@ -1,9 +1,8 @@
 <?php include('header.php');?>
 
 <main>
-    <h1>WELCOME ADMIN!</h1>
-    <p>Add new destination:</p><br>
-    <form id="desinationUpload" name="destinationUpload" method="post" enctype="multipart/form-data">
+    <h1>Upload new destination:</h1>
+    <form id="destinationUpload" name="destinationUpload" method="post" enctype="multipart/form-data">
         <label for="destName">Name:</label>
         <input type="text" name="destName" id="destName"> <br>
         
@@ -23,10 +22,10 @@
             ?>
         </select><br>
         
-        <label for="destImg">Select image to upload:</label> <br>
+        <label for="destImg">Select image to upload:</label>
         <input type="file" name="destImg" id="destImg"> <br>
         
-        <input type="submit" value="Upload destination" name="submitDest">
+        <button type="submit" value="1" name="submitDest">Upload destination</Button>
     </form>
     <?php 
         if (isset($_POST['submitDest'])) {
