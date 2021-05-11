@@ -30,7 +30,7 @@ function destUpload($destName, $destDes, $destCity, $destImg) {
 
     $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
 
-    $sql="INSERT INTO Destination () VALUES ('$destName', '$destDes', '$destCity', '$destImg')";
+    $sql="INSERT INTO Destination (CityID, Name, Description, Picture) VALUES ('$destCity', '$destName', '$destDes', '$destImg')";
     if(mysqli_query($dbConn, $sql)) {
         echo "<br><p>Destination uploaded</p>";
     }
