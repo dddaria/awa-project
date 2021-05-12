@@ -312,9 +312,13 @@ input[type=submit]:hover {
   margin: 0 auto;
   padding: 60px 60px;
 }
+.destination-fact-div{
+  width: calc(30% - 60px);
+  float: left;
+  padding-right: 60px;
+  }
 .destination-img{
 width: calc(70% - 30px);
-display: inline-block;
 box-sizing: border-box;
 float: right;
 padding-left: 30px;
@@ -325,23 +329,12 @@ object-fit: cover;
 max-height: 300px;
 width: 100%;}
 
-.destination-fact-div{
-width: calc(30% - 60px);
-display: inline-block;
-padding-right: 60px;
-}
-
 .destination-text-div{
 width: 50%;
 display: inline-block;
 box-sizing: border-box;
 margin-top: 30px;;
 }
-.destination-text-div{
-  width: 100%;
-  display: inline-block;
-  box-sizing: border-box;
-  }
 /*********** Random destination *********************/
 .randomize {
     text-align: center;
