@@ -310,27 +310,32 @@ input[type=submit]:hover {
 /********Destination********/
 .destination-div{
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 60px 60px;
 }
 .destination-img{
-width: 50%;
+width: calc(70% - 30px);
 display: inline-block;
 box-sizing: border-box;
+float: right;
+padding-left: 30px;
 }
 
 .destination-img img {
 object-fit: cover;
-height: 300px;}
+max-height: 300px;
+width: 100%;}
 
 .destination-fact-div{
-width: 30%;
+width: calc(30% - 60px);
+display: inline-block;
+padding-right: 60px;
 }
 
 .destination-text-div{
 width: 50%;
 display: inline-block;
 box-sizing: border-box;
-margin-right: 30px;
+margin-top: 30px;;
 }
 .destination-text-div{
   width: 100%;

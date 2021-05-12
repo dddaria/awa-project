@@ -12,7 +12,7 @@ include('header.php');  ?>
       
 
         <div class="destination-fact-div"> 
-                <h1> destinationName FRANCE, EIFFELTOWER </h1>
+                <h1>FRANCE, EIFFELTOWER </h1>
                 <p> Country: France
                     <br>
                     Money:none
