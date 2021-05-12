@@ -323,15 +323,31 @@ input[type=submit]:hover {
 
 
 /********Destination********/
+.destination-div{
+  margin: 0 auto;
+  padding: 0 50px;
+}
 .destination-img{
 width: 50%;
 display: inline-block;
+box-sizing: border-box;
+}
+.destination-img img {
+object-fit: cover;
+height: 300px;}
+
+.destination-fact-div{
+width: 30%;
+display: inline-block;
+float: left;
+box-sizing: border-box;
+margin-right: 30px;
 }
 .destination-text-div{
-width: 50%;
-display: inline-block;
-}
-
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  }
 /*********** Random destination *********************/
 .randomize {
     text-align: center;
