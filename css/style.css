@@ -115,22 +115,17 @@ padding-inline-start: 0px !important;
 .search-container {
     padding-left:2vw;
     width:100%;
-   
 }
 
-
 /******** Home Page ************/
-
 .slideshow-container{
     width:100%;
     position:relative;
     margin:auto;
-
 }
 
 .mySlides{
     display:none;
-
 }
 
 .mySlides img{
@@ -212,6 +207,116 @@ main .destGrid{
   .img-fix:hover {
     transform: scale(1.02);
   }
+/********Destination********/
+.destination-page{
+  width: 80%;
+  margin: 90px auto;
+}
+.destination-top-div{
+  margin-bottom:60px;
+}
+.destination-info-div {
+  width: 40%;
+  display: inline-block;
+  /* color: #495f4b; */
+  color: #658b6f;
+  float: left;
+  box-sizing: border-box;
+}
+.destination-header{
+  display: inline-block;
+  font-size: 28px;
+  margin-top: 0;
+}
+.destination-table th {
+  text-align: left !important;
+  padding-left: 0;
+  
+}
+.destination-table td{
+  padding-left: 15px
+}
+.destination-table tr {
+  padding-bottom: 15px;
+  display: block;
+  font-size: 20px;
+}
+
+.destination-img-div{
+  margin: 0 auto;
+  overflow: hidden;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 60%;
+}
+.destination-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+/*********** Random destination *********************/
+.randomize {
+    text-align: center;
+}
+
+#randomize-btn {
+    padding: 15px 20px;
+    margin: 0 auto;
+    margin-top: 15px;
+    line-height: 1.4em;
+    border: none;
+    border-radius: 8px;
+    background-color: #658b6f;
+    font-weight: bold;
+    color: #fff;
+}
+
+#randomize-btn:hover {
+    background-color: #93caa2;
+}
+
+#random-destination {
+    display: none;
+}
+
+/******** Upload Destination ************/
+#destinationUpload {
+  width: 60%;
+}
+
+#destinationUpload label{
+  font-size: 1em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#destName, #destDes, #destCity {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  font-family: 'Bebas-Neue', sans-serif;
+  font-size: 0.9em;
+  margin-bottom: 40px;
+}
+
+#destDes {
+  height: 4em;
+}
+
+#destinationUpload button {
+  padding: 14px 20px;
+  margin: 40px 0px;
+  border: none;
+  border-radius: 8px;
+  background-color: #658b6f;
+  color: #fff;
+}
+
+#destinationUpload button:hover {
+  background-color: #93caa2;
+}
+
 
 /******** Login Page ************/
 .loginBox{
@@ -304,30 +409,39 @@ input[type=submit]:hover {
 input[type=submit]:hover {
   opacity: 0.7;
 }
-/********Profile page /account********/
+
+
+/********Profile page/account********/
 .profile-page{
   width: 60%;
-  margin: 60px auto;
+  margin: 90px auto;
 }
 .profile-info-div {
   width: 50%;
   display: inline-block;
+  /* color: #495f4b; */
+  color: #658b6f;
 }
 .profile-header{
   display: inline-block;
   font-size: 28px;
+  margin-top: 0;
 }
 .profile-table th {
   text-align: left !important;
+  padding-left: 0;
   
 }
 .profile-table td{
-padding-left: 15px
+  padding-left: 15px
 }
 .profile-table tr {
   padding-bottom: 15px;
   display: block;
   font-size: 20px;
+}
+.change-profile-info a{
+  padding-left: 5px;
 }
 
 .profile-right-div{
@@ -350,97 +464,9 @@ padding-left: 15px
 }
 .change-profile-img  {
   text-align: center;
+  margin-top:30px;
 }
 
-/********Destination********/
-.destination-div{
-  margin: 0 auto;
-  padding: 60px 60px;
-}
-.destination-fact-div{
-  width: calc(30% - 60px);
-  float: left;
-  padding-right: 60px;
-  }
-.destination-img{
-width: calc(70% - 30px);
-box-sizing: border-box;
-float: right;
-padding-left: 30px;
-}
-
-.destination-img img {
-object-fit: cover;
-max-height: 300px;
-width: 100%;}
-
-.destination-text-div{
-width: 50%;
-display: inline-block;
-box-sizing: border-box;
-margin-top: 30px;;
-}
-/*********** Random destination *********************/
-.randomize {
-    text-align: center;
-}
-
-#randomize-btn {
-    padding: 15px 20px;
-    margin: 0 auto;
-    margin-top: 15px;
-    line-height: 1.4em;
-    border: none;
-    border-radius: 8px;
-    background-color: #658b6f;
-    font-weight: bold;
-    color: #fff;
-}
-
-#randomize-btn:hover {
-    background-color: #93caa2;
-}
-
-#random-destination {
-    display: none;
-}
-
-/******** Upload Destination ************/
-#destinationUpload {
-  width: 60%;
-}
-
-#destinationUpload label{
-  font-size: 1em;
-  display: block;
-  margin-bottom: 5px;
-}
-
-#destName, #destDes, #destCity {
-  width: 100%;
-  margin: 0 auto;
-  padding: 5px;
-  font-family: 'Bebas-Neue', sans-serif;
-  font-size: 0.9em;
-  margin-bottom: 40px;
-}
-
-#destDes {
-  height: 4em;
-}
-
-#destinationUpload button {
-  padding: 14px 20px;
-  margin: 40px 0px;
-  border: none;
-  border-radius: 8px;
-  background-color: #658b6f;
-  color: #fff;
-}
-
-#destinationUpload button:hover {
-  background-color: #93caa2;
-}
 
 
 /******** Footer ************/
