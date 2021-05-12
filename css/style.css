@@ -8,16 +8,21 @@ body {
 }
 
 main {
-	max-width: 960px;
 	margin: 0 auto;
 	min-width: 300px;
-    padding: 60px 0px;
+  width: 80%;
+  margin-top: 50px;
 }
+
 a {
 	color:#e0d0ae;
 	padding: 1vw;
 	margin: 0 auto;
 	text-decoration: none;
+}
+
+.warning {
+  color: red;
 }
 
 /***********Header*********************/
@@ -93,17 +98,6 @@ padding-inline-start: 0px !important;
     padding-right: 2vw;
 }
 
-/* .search-container button {
-    float:right;
-    margin: 6.5% 11% 0% 0%;
-    background: #ddd;
-    font-size: 1.35vw;
-    border: none;
-    cursor: pointer;
-    padding:3%;
-    width:13%;
-} */
-
 .search-container button:hover {
   background: #ccc;
   
@@ -124,17 +118,7 @@ padding-inline-start: 0px !important;
    
 }
 
-.cartImage {
-    max-width:100%;
-    height:auto;
-    margin: 0% 0% 0% 100%;
-}
 
-.cart {
-    width:3vw;
-    float:right;
-    margin: 30% 0% 0% 0%;
-}
 /******** Home Page ************/
 
 .slideshow-container{
@@ -236,7 +220,7 @@ main .destGrid{
     margin:auto;
 }
 
-.LoginForm input[type=text], select, textarea {
+.LoginForm input[type=text]{
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -246,7 +230,8 @@ main .destGrid{
   margin-bottom: 16px;
   resize: vertical;
 }
-.LoginForm input[type=password], select, textarea {
+
+.LoginForm input[type=password] {
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -285,7 +270,7 @@ input[type=submit]:hover {
 
 /******** Sign Up ************/
 
-.SignUpForm input[type=text], select, textarea {
+.SignUpForm input[type=text], select {
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -295,7 +280,7 @@ input[type=submit]:hover {
   margin-bottom: 16px;
   resize: vertical;
 }
-.SignUpForm input[type=password], select, textarea {
+.SignUpForm input[type=password], select {
   width: 50%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -332,14 +317,18 @@ width: 50%;
 display: inline-block;
 box-sizing: border-box;
 }
+
 .destination-img img {
 object-fit: cover;
 height: 300px;}
 
 .destination-fact-div{
 width: 30%;
+}
+
+.destination-text-div{
+width: 50%;
 display: inline-block;
-float: left;
 box-sizing: border-box;
 margin-right: 30px;
 }
@@ -372,6 +361,44 @@ margin-right: 30px;
 #random-destination {
     display: none;
 }
+
+/******** Upload Destination ************/
+#destinationUpload {
+  width: 60%;
+}
+
+#destinationUpload label{
+  font-size: 1em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#destName, #destDes, #destCity {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  font-family: 'Bebas-Neue', sans-serif;
+  font-size: 0.9em;
+  margin-bottom: 40px;
+}
+
+#destDes {
+  height: 4em;
+}
+
+#destinationUpload button {
+  padding: 14px 20px;
+  margin: 40px 0px;
+  border: none;
+  border-radius: 8px;
+  background-color: #658b6f;
+  color: #fff;
+}
+
+#destinationUpload button:hover {
+  background-color: #93caa2;
+}
+
 
 /******** Footer ************/
 footer {
