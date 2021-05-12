@@ -306,7 +306,7 @@ input[type=submit]:hover {
 }
 /********Profile page /account********/
 .profile-page{
-  width: 80%;
+  width: 60%;
   margin: 60px auto;
 }
 .profile-info-div {
@@ -315,9 +315,11 @@ input[type=submit]:hover {
 }
 .profile-header{
   display: inline-block;
+  font-size: 28px;
 }
 .profile-table th {
   text-align: left !important;
+  
 }
 .profile-table td{
 padding-left: 15px
@@ -325,6 +327,7 @@ padding-left: 15px
 .profile-table tr {
   padding-bottom: 15px;
   display: block;
+  font-size: 20px;
 }
 .profile-right-div{
   width: 50%;
@@ -333,8 +336,8 @@ padding-left: 15px
 .profile-img-div{
   margin: 0 auto;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   overflow: hidden;
   border-radius: 50%;
   
