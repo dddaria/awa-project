@@ -1,26 +1,27 @@
 <?php include('header.php');?>
-<!-- <?php
+
 <div class="profile-page">
-<div class="profile-info-div"> 
-echo '        <h2 class="profile-header"> Welcome $name </h2>
-<table class="profile-table"> 
-        <tr>
-            <th>Username</th> <td>$username</td>
-        </tr>
-        <tr>
-            <th>Password</th> <td>$pwd</td>
-        </tr>
-        <tr>
-            <th>Email</th> <td>$mail</td>
-        </tr>
-        <tr>
-            <th>Phone</th> <td>$phone</td>
-        </tr>
-        <tr>
-            <th>Nationality</th> <td>Östgötsk</td>
-        </tr>
-</table>
-</div>';
+    <div class="profile-info-div"> 
+        <!-- <?php
+        echo '        <h2 class="profile-header"> Welcome $name </h2>
+        <table class="profile-table"> 
+                <tr>
+                    <th>Username</th> <td>$username</td>
+                </tr>
+                <tr>
+                    <th>Password</th> <td>$pwd</td>
+                </tr>
+                <tr>
+                    <th>Email</th> <td>$mail</td>
+                </tr>
+                <tr>
+                    <th>Phone</th> <td>$phone</td>
+                </tr>
+                <tr>
+                    <th>Nationality</th> <td>Östgötsk</td>
+                </tr>
+        </table>
+    </div>';
 ?> -->
 
         <h2 class="profile-header"> Welcome Cajsa</h2>
@@ -41,6 +42,7 @@ echo '        <h2 class="profile-header"> Welcome $name </h2>
                             <th>Nationality</th> <td>Östgötsk</td>
                         </tr>
                 </table>
+                <p class="change-profile-info" ><a>Edit info</a></p>
     </div>
 
     <div class="profile-right-div">
