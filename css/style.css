@@ -304,8 +304,49 @@ input[type=submit]:hover {
 input[type=submit]:hover {
   opacity: 0.7;
 }
-
-
+/********Profile page /account********/
+.profile-page{
+  width: 80%;
+  margin: 60px auto;
+}
+.profile-info-div {
+  width: 50%;
+  display: inline-block;
+}
+.profile-header{
+  display: inline-block;
+}
+.profile-table th {
+  text-align: left !important;
+}
+.profile-table td{
+padding-left: 15px
+}
+.profile-table tr {
+  padding-bottom: 15px;
+  display: block;
+}
+.profile-right-div{
+  width: 50%;
+  float: right;
+}
+.profile-img-div{
+  margin: 0 auto;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  
+}
+.profile-img{
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+.change-profile-img  {
+  text-align: center;
+}
 
 /********Destination********/
 .destination-div{
