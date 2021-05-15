@@ -38,4 +38,29 @@ function destUpload($destName, $destDes, $destCity, $destImg) {
         echo "<br><p class='warning'>Failed to upload destination. Try again.</p>";
     }
 };
-?>
+
+function setComments($dbConn){
+    //if the submit button for comment is clicked this info is inserted into the database
+    if (isset($_POST['commentSubmit'])){
+        $comName = $_POST['comName'];
+        $comDate = $_POST['comDate'];
+        $comEmail = $_POST['comEmail'];
+        $comment = $_POST['comment'];
+
+        $sql = "INSERT INTO Comment (Name, Date, Email, Comment) VALUES ('$comName','$comDate', '$comEmail', '$comment'";
+        $result = $dbConn->query($sql);
+    }
+
+}
+
+function getComments($dbConn){
+$sql ="SELECT * FROM Comments";
+$result = $dbConn->query($sql);
+while ($row = $result->fetch_assoc()){
+echo"<div class='single-comment'><p>";
+    echo $row['name']. "<br>";
+    echo $row['email']. "<br>";
+    //inserts HTML line breaks before all newlines in a string
+    echo nl2br($row['comment']);
+    echo"</p></div>";
+        }

@@ -43,19 +43,24 @@ include('header.php');  ?>
             </div>
             
        
+        <?php
+            echo "<form class='comment-form' action='' method='POST'>
+                
+                <h3> Make a comment</h3>
+                    <input style='display:hidden;' type='hidden' name='comDate' value='".date('Y-m-d H:i')."'>
+                    <input type='text' name='comName' placeholder='Your Name'>
+                    <input type='email' name='comEmail' placeholder='Email'>
+            
+                    <textarea class='commment_textarea'name='comment'placeholder='Type your comment here'>
+                     </textarea>
+                
+                <button type='submit' value='Submit' name='comSubmit'>Submit</button>
+            </form>";
+        ?>
 
-        <form class="comment-form"action="" method="post">
-        <div>
-            <h3> Make a comment</h3>
-        <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
-        Hey... say something!
-        </textarea>
-        </div>
-        <input type="submit" value="Submit">
-        </form>
-
-        <div class="comment-box">
-        </div
-</div> 
-<?php 
-include('footer.php');?>
+        <div class='posted-comments'>
+            <h3> Latest comments</h3>
+ 
+        </div>  
+</div> <!-- destination page div -->
+<?php include('footer.php');?>

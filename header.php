@@ -81,3 +81,4 @@
 			</div> <!-- end of header div -->
 		</header>
 <?php include ('config.php'); ?>
+<?php include ('connect.php'); ?>

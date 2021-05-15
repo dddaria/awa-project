@@ -212,6 +212,10 @@ main .destGrid{
   width: 80%;
   margin: 90px auto;
 }
+.destination-page h3{
+  color: #658b6f;
+  }
+
 .destination-top-div{
   margin-bottom:60px;
 }
@@ -230,7 +234,6 @@ main .destGrid{
 .destination-table th {
   text-align: left !important;
   padding-left: 0;
-  
 }
 .destination-table td{
   padding-left: 15px
@@ -240,6 +243,7 @@ main .destGrid{
   display: block;
   font-size: 20px;
 }
+
 
 .destination-img-div{
   margin: 0 auto;
@@ -252,8 +256,51 @@ main .destGrid{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 }
+
+
+.comment-form{
+  width: 60%;
+  margin: 30px auto;
+}
+.comment-form input{
+  display: block;
+  margin-bottom: 12px;
+  border-color: #658b6f;
+  border-style:solid;
+  border-radius:4px;
+  padding: 4px 4px 4px 8px;
+  border-width: 1px;
+  width: 50%;
+}
+.commment_textarea{
+  height:90px;
+  width:100%;
+  resize: none;
+  border-color: #658b6f;
+  border-style:solid;
+  border-radius:4px;
+  padding: 4px;
+  border-width: 1px;
+}
+.comment-form button {
+padding: 12px 18px;
+margin-top: 15px;
+
+border: none;
+border-radius: 8px;
+background-color: #658b6f;
+font-weight: bold;
+color: #fff;
+text-transform: uppercase;
+}
+
+
+.posted-comments{
+  width: 60%;
+  margin: 30px auto;
+}
+
 /*********** Random destination *********************/
 .randomize {
     text-align: center;

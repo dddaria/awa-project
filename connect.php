@@ -14,5 +14,3 @@ if($dbConn->connect_errno) {
     echo "Failed to connect to database:" . $dbConn->connect_error;
 };
 //echo "Connected successfully"; 
-
-?>
