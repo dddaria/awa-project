@@ -43,7 +43,19 @@ include('header.php');  ?>
             </div>
             
        
-</div> 
 
+        <form class="comment-form"action="" method="post">
+        <div>
+            <h3> Make a comment</h3>
+        <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+        Hey... say something!
+        </textarea>
+        </div>
+        <input type="submit" value="Submit">
+        </form>
+
+        <div class="comment-box">
+        </div
+</div> 
 <?php 
 include('footer.php');?>

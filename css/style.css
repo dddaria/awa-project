@@ -217,7 +217,6 @@ main .destGrid{
 }
 .destination-info-div {
   width: 40%;
-  display: inline-block;
   /* color: #495f4b; */
   color: #658b6f;
   float: left;
