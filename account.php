@@ -24,7 +24,7 @@
     </div>';
 ?> -->
 
-        <h2 class="profile-header"> Welcome Cajsa!</h2>
+        <h1 class="profile-header"> Welcome Cajsa!</h1>
                 <table class="profile-table"> 
                         <tr>
                             <th>Username:</th> <td>lica18</td>
