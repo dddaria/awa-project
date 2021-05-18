@@ -323,7 +323,20 @@ text-transform: uppercase;
 }
 
 #random-destination {
-    display: none;
+  margin-top: 40px;
+  color: #34503b;
+}
+
+#random-destination > img{
+    width: 80%;
+    margin: 40px 0px;
+}
+
+#random-destination > a{
+    padding: 10px 15px;
+    background-color: #658b6f;
+    color: #fff;
+    border-radius: 5px;
 }
 
 /******** Upload Destination ************/

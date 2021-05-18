@@ -7,16 +7,21 @@
 
     <?php
         if(isset($_GET['randomize'])) {
-            echo "<p>".getRandomDestination()."</p>";
-        }
+            $randomDestID = getRandomDestination();
+
+            $sql = "SELECT Name, Picture FROM destination WHERE DestinationID =".$randomDestID;
+            $stmt = $dbConn->prepare($sql);
+            $stmt->bind_result($name, $pic);
+            $stmt->execute();
+            $stmt->fetch();
+
+            echo "<div id='random-destination'>";
+            echo "<h1>You should check out ".$name."</h1>";
+            echo "<img src='".$pic."' alt='pic of destination'/><br>";
+            echo "<a href='destination.php'>Read more...</a>";
+            echo "</div>";
+        };
     ?>
-    
-    <!-- Denna ska endast visas efter man klickat på knappen -->
-    <div id="random-destination">
-        <h1>You should check out *namn på destination*</h1>
-        <img arc="" alt="bild på destination"/><br>
-        <button>Read more...</button>
-    </div>
 </main>
 
 <?php include('footer.php');?>
