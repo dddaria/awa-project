@@ -327,17 +327,22 @@ text-transform: uppercase;
   color: #34503b;
 }
 
-#random-destination > img{
+#random-destination > img {
     width: 80%;
     margin: 40px 0px;
 }
 
-#random-destination > a{
+#random-destination > a {
     padding: 10px 15px;
     background-color: #658b6f;
     color: #fff;
     border-radius: 5px;
 }
+
+#random-destination > a:hover {
+  background-color: #93caa2;
+}
+
 
 /******** Upload Destination ************/
 #destinationUpload {
