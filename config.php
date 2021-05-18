@@ -65,3 +65,20 @@ while ($row = $result->fetch_assoc()){
     echo"</p></div>";
     }
 }
+
+function getRandomDestination() {
+    $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
+    $sql = "SELECT destinationID FROM Destination";
+    $allDest = array();
+    
+    $stmt = $dbConn->prepare($sql);
+    $stmt->bind_result($dest);
+    $stmt->execute();
+
+    while ($stmt->fetch()) {
+        array_push($allDest, $dest);
+    }
+
+    $randomDest = rand(0, count($allDest)-1);
+    return $allDest[$randomDest];
+}
