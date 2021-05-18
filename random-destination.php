@@ -1,9 +1,15 @@
 <?php include('header.php');?>
 
 <main class="randomize">
+    <form method="get">
+        <button name="randomize" id="randomize-btn" value="1">Show me a<br>random destination</button>
     <form>
-        <button name="randomize" id="randomize-btn">Show me a<br>random destination</button>
-    <form>
+
+    <?php
+        if(isset($_GET['randomize'])) {
+            echo "<p>".getRandomDestination()."</p>";
+        }
+    ?>
     
     <!-- Denna ska endast visas efter man klickat på knappen -->
     <div id="random-destination">
