@@ -1,5 +1,24 @@
 <?php include('header.php');?>
 
+<?php
+    if($_SESSION["loggedin"] !== "true"){
+    header("location:/awa-project/login.php"); //kollar om man är inloggad. annars flyttar till login
+    }
+?>
+
+<form class="LogOutButt" action="" method="POST">
+    <input type="submit" name="LogOut" value="Log Out">
+</form>
+
+<?php
+    if(isset($_POST['LogOut'])){
+    session_unset(); 
+    $_SESSION["loggedin"] = "false";
+    header("location:/awa-project/login.php");
+    }      
+?>
+
+
 <div class="profile-page">
     <div class="profile-info-div"> 
         <!-- <?php
@@ -52,4 +71,5 @@
         <p class="change-profile-img" ><a>Change profile picture</a></p>
     </div>
 </div> 
+
 <?php include('footer.php');?>
