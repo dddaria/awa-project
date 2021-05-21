@@ -29,20 +29,21 @@ include('header.php');  ?>
                     </table> ';
             ?> 
          </div>
-
-            <div class="destination-text-div"> 
-                   <?php 
-                   echo' <p> '.$destDes.'</p>';
-           
-                ?>
-           </div>
-           <div class="destination-image-div"> 
-                   <?php 
-                   echo' <div> '.$destPic.'</div>';
+                <?php      
+                   echo' <div class="destination-text-div">
+                   <p> '.$destDes.'</p>
+                   </div>';
            
                 ?>
            </div>
             
+                   <?php 
+                   echo' <div class="destination-image-div">'.$destPic.'</div>';
+           
+                ?>
+           
+    
+  <div class="comments-div" 
        
         <?php
             echo "<form class='comment-form' action='' method='POST'>
@@ -61,10 +62,18 @@ include('header.php');  ?>
 
         <div class='posted-comments'>
             <h3> Latest comments</h3>
-            <!-- <?php
-           $query= "SELECT Comment, Name, Data FROM Comment WHERE destinationID="
-            ?>
-            -->
-        </div>  
+            <?php
+        // $DestID = $_GET['link'];
+        // $sql = "SELECT Comment, name FROM Comment WHERE DestinationID='$DestID'";
+        //     $stmt = $dbConn->prepare($sql);
+        //     $stmt->bind_result($comment, $name);
+        //     $stmt->execute();
+        //     $stmt->fetch();
+
+        //     echo $comment;
+        //     ?>
+           
+        </div>   
+    </div>
 </div> <!-- destination page div -->
 <?php include('footer.php');?>

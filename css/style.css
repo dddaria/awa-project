@@ -207,7 +207,7 @@ main .destGrid{
   .img-fix:hover {
     transform: scale(1.02);
   }
-/********Destination********/
+/**************'Destination**************/
 .destination-page{
   width: 80%;
   margin: 90px auto;
@@ -256,6 +256,11 @@ main .destGrid{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.destination-text-div{
+  display: block;
+  width: 100%;
+  padding: 0 50px;
 }
 
 
