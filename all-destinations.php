@@ -7,88 +7,21 @@
 
   <main class="destGrid">
     <ul>
-      	<li>
-        	<div class="text-on-img">
-         	<a href="/awa-project/all-destinations.php">
-         	<img src="" class="img-fix" /></a>
-        	</div>
-      	</li>
-      	<li>
-        	<div class="text-on-img">
-          	<a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" /></a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="text-on-img">
-          <a href="/awa-project/all-destinations.php">
-            <img src="" class="img-fix" />
-          </a>
-        </div>
-      </li>
+      <?php 
+        $sql = "SELECT DestinationID, Name, Picture FROM Destination";
+        $stmt = $dbConn->prepare($sql);
+        $stmt->bind_result($DestID, $Name, $Picture);
+        $stmt->execute();
+        
+        while ($stmt->fetch()) {
+          echo "<li>";
+          echo "<div class='text-on-img'>";
+          echo '<a href="/awa-project/destination.php">';
+         	echo '<img src="'.$Picture.'" class="img-fix" /></a>';
+        	echo "</div>";
+      	  echo "</li>";
+        };
+      ?>
     </ul>
   </main>
 	
