@@ -23,6 +23,8 @@ include('header.php');  ?>
         $sql1 = "UPDATE Destination
                 SET ViewedIndex='$vIndex'
                 WHERE DestinationID='$DestID'";
+
+        mysqli_query($dbConn, $sql1);
 ?>
 <div class="destination-page">
     <div class="destination-top-div">
