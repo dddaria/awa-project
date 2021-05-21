@@ -1,6 +1,21 @@
 <?php 
 include('header.php');  ?>
 
+<?php 
+    $DestID = $_GET['link'];
+    $sql = "SELECT d.Name, d.Description, d.Picture, c.Name, co.Name, con.Name
+            FROM Destination AS d
+            JOIN City AS c ON d.CityID = c.CityID
+            JOIN Country AS co ON co.CountryID = c.CountryID
+            JOIN Continent AS con ON con.ContinentID = co.ContinentID
+            WHERE DestinationID='$DestID'";
+        $stmt = $dbConn->prepare($sql);
+        $stmt->bind_result($destName, $destDes, $destPic, $cityName, $countryName, $contentName);
+        $stmt->execute();
+        $stmt->fetch();
+
+        echo $destName, $destDes, $destPic, $cityName, $countryName, $contentName;
+?>
 <div class="destination-page">
     <div class="destination-top-div">
         <div class="destination-info-div"> 

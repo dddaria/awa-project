@@ -16,7 +16,7 @@
         while ($stmt->fetch()) {
           echo "<li>";
           echo "<div class='text-on-img'>";
-          echo '<a href="/awa-project/destination.php">';
+          echo '<a href="/awa-project/destination.php?link=' . $DestID . '">';
          	echo '<img src="'.$Picture.'" class="img-fix" /></a>';
         	echo "</div>";
       	  echo "</li>";
