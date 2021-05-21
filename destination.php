@@ -3,16 +3,28 @@ include('header.php');  ?>
 
 <?php 
     $DestID = $_GET['link'];
-    $sql = "SELECT d.Name, d.Description, d.Picture, c.Name, co.Name, con.Name
+    $sql = "SELECT d.Name, d.Description, d.Picture, c.Name, co.Name, con.Name, d.ViewedIndex
             FROM Destination AS d
             JOIN City AS c ON d.CityID = c.CityID
             JOIN Country AS co ON co.CountryID = c.CountryID
             JOIN Continent AS con ON con.ContinentID = co.ContinentID
             WHERE DestinationID='$DestID'";
         $stmt = $dbConn->prepare($sql);
-        $stmt->bind_result($destName, $destDes, $destPic, $cityName, $countryName, $contentName);
+        $stmt->bind_result($destName, $destDes, $destPic, $cityName, $countryName, $contentName, $vIndex);
         $stmt->execute();
         $stmt->fetch();
+        
+        $dbConn->close();
+
+        //Opening the connection again
+        $dbConn = mysqli_connect($host, $user, $password, $database);
+        //adding one click to viewed index
+        $vIndex++;
+        $sql1 = "UPDATE Destination
+                SET ViewedIndex='$vIndex'
+                WHERE DestinationID='$DestID'";
+
+        mysqli_query($dbConn, $sql1);
 ?>
 <div class="destination-page">
     <div class="destination-top-div">
