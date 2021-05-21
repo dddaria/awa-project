@@ -60,7 +60,10 @@ include('header.php');  ?>
 
         <div class='posted-comments'>
             <h3> Latest comments</h3>
- 
+            <!-- <?php
+           $query= "SELECT Comment, Name, Data FROM Comment WHERE destinationID="
+            ?>
+            -->
         </div>  
 </div> <!-- destination page div -->
 <?php include('footer.php');?>

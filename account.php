@@ -36,9 +36,6 @@
                 <tr>
                     <th>Phone:</th> <td>$phone</td>
                 </tr>
-                <tr>
-                    <th>Nationality:</th> <td>Östgötsk</td>
-                </tr>
         </table>
     </div>';
 ?> -->
@@ -57,8 +54,7 @@
                         <tr>
                             <th>Phone:</th> <td>siffror</td>
                         </tr>
-                        <tr>
-                            <th>Nationality:</th> <td>Östgötsk</td>
+                     
                         </tr>
                 </table>
                 <p class="change-profile-info"><a>Edit info</a></p>
