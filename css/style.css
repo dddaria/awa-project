@@ -218,6 +218,8 @@ main .destGrid{
 
 .destination-top-div{
   margin-bottom:60px;
+  display: inline-block !important;
+  width: 100%;
 }
 .destination-info-div {
   width: 40%;
@@ -243,8 +245,6 @@ main .destGrid{
   display: block;
   font-size: 20px;
 }
-
-
 .destination-img-div{
   margin: 0 auto;
   overflow: hidden;
@@ -258,17 +258,19 @@ main .destGrid{
   object-fit: cover;
 }
 .destination-text-div{
-  display: block;
+  display: inline-block;
   width: 100%;
-  padding: 0 50px;
 }
 
-
+.comments-div{
+  width: 80%;
+  margin: 30px auto;
+}
 .comment-form{
   width: 60%;
   margin: 30px auto;
 }
-.comment-form input{
+.comments-div input{
   display: block;
   margin-bottom: 12px;
   border-color: #658b6f;
@@ -288,10 +290,9 @@ main .destGrid{
   padding: 4px;
   border-width: 1px;
 }
-.comment-form button {
+.comments-div button {
 padding: 12px 18px;
 margin-top: 15px;
-
 border: none;
 border-radius: 8px;
 background-color: #658b6f;
@@ -299,11 +300,8 @@ font-weight: bold;
 color: #fff;
 text-transform: uppercase;
 }
-
-
 .posted-comments{
-  width: 80%;
-  margin: 30px auto;
+  margin-top: 60px;
 }
 
 /*********** Random destination *********************/

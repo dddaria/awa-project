@@ -16,34 +16,34 @@ include('header.php');  ?>
 ?>
 <div class="destination-page">
     <div class="destination-top-div">
-        <div class="destination-info-div"> 
-            <?php
-                echo ' <h2 class="destination-header"> Welcome to '.$destName.' !</h2>
-                    <table class="destination-table"> 
-                        <tr>
-                            <th>Country:</th> <td>'.$countryName.'</td>
-                        </tr>
-                        <tr>
-                            <th>City:</th> <td>'.$cityName.'</td>
-                        </tr>
-                    </table> ';
-            ?> 
-         </div>
-                <?php      
-                   echo' <div class="destination-text-div">
-                   <p> '.$destDes.'</p>
-                   </div>';
-           
-                ?>
-           </div>
-            
-                   <?php 
+            <div class="destination-info-div"> 
+                <?php
+                    echo ' <h2 class="destination-header"> Welcome to '.$destName.' !</h2>
+                        <table class="destination-table"> 
+                            <tr>
+                                <th>Country:</th> <td>'.$countryName.'</td>
+                            </tr>
+                            <tr>
+                                <th>City:</th> <td>'.$cityName.'</td>
+                            </tr>
+                        </table> ';
+                        ?> 
+            </div>
+                <?php 
                    echo' <div class="destination-image-div">'.$destPic.'</div>';
-           
                 ?>
+    </div>
+
+                <?php      
+                    echo' <div class="destination-text-div">
+                    <p> '.$destDes.'</p>
+                    </div>';
+                
+                    ?>
+                        
            
     
-  <div class="comments-div" 
+  <div class="comments-div">
        
         <?php
             echo "<form class='comment-form' action='' method='POST'>
@@ -51,6 +51,7 @@ include('header.php');  ?>
                 <h3> Write a comment</h3>
                     <input style='display:hidden;' type='hidden' name='comDate' value='".date('Y-m-d H:i')."'>
                     <input type='text' name='comName' placeholder='Your Name'>
+                    
                     <input type='email' name='comEmail' placeholder='Email'>
             
                     <textarea class='commment_textarea'name='comment'placeholder='Type your comment here'>
