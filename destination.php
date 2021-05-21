@@ -27,44 +27,33 @@ include('header.php');  ?>
 <div class="destination-page">
     <div class="destination-top-div">
         <div class="destination-info-div"> 
-            <!-- <?php
-                echo '        <h2 class="destination-header"> Welcome to $place !</h2>
+            <?php
+                echo ' <h2 class="destination-header"> Welcome to '.$destName.' !</h2>
                     <table class="destination-table"> 
                         <tr>
-                            <th>Country:</th> <td>$country</td>
+                            <th>Country:</th> <td>'.$countryName.'</td>
                         </tr>
                         <tr>
-                            <th>Place:</th> <td>$place</td>
+                            <th>City:</th> <td>'.$cityName.'</td>
                         </tr>
-                        <tr>
-                            <th>Money</th> <td>$money</td>
-                        </tr>
-                    </table>
-        </div>';
-            ?> -->
-
-            <h2 class="destination-header"> Welcome to France!</h2>
-                    <table class="destination-table"> 
-                            <tr>
-                                <th>Country:</th> <td>France</td>
-                            </tr>
-                            <tr>
-                                <th>Place:</th> <td>towah</td>
-                            </tr>
-                            <tr>
-                                <th>Money</th> <td>none</td>
-                            </tr>
-                    </table>
-        </div>
-                <div class="destination-img-div">
-                    <img class="destination-img" src="img/eiffel.jpeg">
-                </div> 
-    </div>
-
-            <div class="destination-text-div"> 
-                    <p> destinationText France, in Western Europe, encompasses medieval cities, alpine villages and Mediterranean beaches. Paris, its capital, is famed for its fashion houses, classical art museums including the Louvre and monuments like the Eiffel Tower. The country is also renowned for its wines and sophisticated cuisine. Lascaux’s ancient cave drawings, Lyon’s Roman theater and the vast Palace of Versailles attest to its rich history.</p>
-            </div>
+                    </table> ';
+            ?> 
+         </div>
+                <?php      
+                   echo' <div class="destination-text-div">
+                   <p> '.$destDes.'</p>
+                   </div>';
+           
+                ?>
+           </div>
             
+                   <?php 
+                   echo' <div class="destination-image-div">'.$destPic.'</div>';
+           
+                ?>
+           
+    
+  <div class="comments-div" 
        
         <?php
             echo "<form class='comment-form' action='' method='POST'>
@@ -83,10 +72,18 @@ include('header.php');  ?>
 
         <div class='posted-comments'>
             <h3> Latest comments</h3>
-            <!-- <?php
-           $query= "SELECT Comment, Name, Data FROM Comment WHERE destinationID="
-            ?>
-            -->
-        </div>  
+            <?php
+        // $DestID = $_GET['link'];
+        // $sql = "SELECT Comment, name FROM Comment WHERE DestinationID='$DestID'";
+        //     $stmt = $dbConn->prepare($sql);
+        //     $stmt->bind_result($comment, $name);
+        //     $stmt->execute();
+        //     $stmt->fetch();
+
+        //     echo $comment;
+        //     ?>
+           
+        </div>   
+    </div>
 </div> <!-- destination page div -->
 <?php include('footer.php');?>
