@@ -46,7 +46,7 @@ include('header.php');  ?>
         <?php
             echo "<form class='comment-form' action='' method='POST'>
                 
-                <h3> Make a comment</h3>
+                <h3> Write a comment</h3>
                     <input style='display:hidden;' type='hidden' name='comDate' value='".date('Y-m-d H:i')."'>
                     <input type='text' name='comName' placeholder='Your Name'>
                     <input type='email' name='comEmail' placeholder='Email'>
