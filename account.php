@@ -17,48 +17,39 @@
     header("location:/awa-project/login.php");
     }      
 ?>
+   <?php //behöver hjälp med att connecta t rätt session user....
+    $sql = "SELECT Username, Password, Email, Fullname FROM User WHERE UserID='$userID'";
+        $stmt = $dbConn->prepare($sql);
+        $stmt->bind_result($username, $password, $email, $fullname);
+        $stmt->execute();
+        $stmt->fetch();
 
+        $dbConn->close();
 
+?>
 <div class="profile-page">
     <div class="profile-info-div"> 
-        <!-- <?php
+        <?php
         echo '        <h2 class="profile-header"> Welcome $name !</h2>
         <table class="profile-table"> 
                 <tr>
-                    <th>Username:</th> <td>$username</td>
+                    <th>Phone:</th> <td>'.$Fullname.'</td>
                 </tr>
                 <tr>
-                    <th>Password:</th> <td>$pwd</td>
+                    <th>Username:</th> <td>'.$username.'</td>
                 </tr>
                 <tr>
-                    <th>Email:</th> <td>$mail</td>
+                    <th>Password:</th> <td>'.$password.'</td>
                 </tr>
                 <tr>
-                    <th>Phone:</th> <td>$phone</td>
+                    <th>Email:</th> <td>'.$email.'</td>
                 </tr>
+               
         </table>
+        <p class="change-profile-info"><a>Edit info</a></p>
     </div>';
-?> -->
+?> 
 
-        <h1 class="profile-header"> Welcome Cajsa!</h1>
-                <table class="profile-table"> 
-                        <tr>
-                            <th>Username:</th> <td>lica18</td>
-                        </tr>
-                        <tr>
-                            <th>Password:</th> <td>hemligt</td>
-                        </tr>
-                        <tr>
-                            <th>Email:</th> <td>lång</td>
-                        </tr>
-                        <tr>
-                            <th>Phone:</th> <td>siffror</td>
-                        </tr>
-                     
-                        </tr>
-                </table>
-                <p class="change-profile-info"><a>Edit info</a></p>
-    </div>
 
     <div class="profile-right-div">
         <div class="profile-img-div">
