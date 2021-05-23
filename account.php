@@ -33,7 +33,7 @@
         echo '        <h2 class="profile-header"> Welcome $name !</h2>
         <table class="profile-table"> 
                 <tr>
-                    <th>Phone:</th> <td>'.$Fullname.'</td>
+                    <th>Phone:</th> <td>'.$fullname.'</td>
                 </tr>
                 <tr>
                     <th>Username:</th> <td>'.$username.'</td>
