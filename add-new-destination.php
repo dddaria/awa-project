@@ -1,4 +1,13 @@
-<?php include('header.php');?>
+<?php
+include('header.php');
+
+if($_SESSION["UserType"] !== "Admin")
+{
+    header("location:/awa-project/account.php");
+    echo "You cannot access the page";
+};
+
+?>
 
 <main>
     <h1>Upload new destination:</h1>
