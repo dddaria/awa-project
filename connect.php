@@ -13,4 +13,15 @@ $dbConn = mysqli_connect($host, $user, $password, $database);
 if($dbConn->connect_errno) {
     echo "Failed to connect to database:" . $dbConn->connect_error;
 };
-//echo "Connected successfully"; 
+
+//Session hijacking protection
+if(isset($_SESSION["UserIP"])) {
+    //Checking if session isn't hijacked
+    if($_SESSION["UserIP"] !== $_SERVER['REMOTE_ADDR']) {
+        //If session is hijacked, destroy it
+        session_unset();
+        session_destroy();
+        //Start new session
+        session_start();
+    };
+};
