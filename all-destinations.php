@@ -1,10 +1,5 @@
 <?php include('header.php');?>
 
-<!DOCTYPE html>
-
-<html>
-	
-
   <main class="destGrid">
     <ul>
       <?php 
@@ -24,8 +19,5 @@
       ?>
     </ul>
   </main>
-	
-
-</html>
 
 <?php include('footer.php');?>
