@@ -49,6 +49,7 @@
 					$_SESSION["loggedin"] = "true";
 					$_SESSION["UserName"] = $Username;
 					$_SESSION["UserType"] = $Usertype;
+					$_SESSION["UserIP"] = $_SERVER['REMOTE_ADDR'];
 
 
 					header("location:/awa-project/account.php");
@@ -58,6 +59,7 @@
 					$_SESSION["loggedin"] = "true";
 					$_SESSION["UserName"] = $Username;
 					$_SESSION["UserType"] = $UserType;
+					$_SESSION["UserIP"] = $_SERVER['REMOTE_ADDR'];
 
 					header("location:/awa-project/account.php");
 				}
