@@ -18,6 +18,9 @@
     }      
 ?>
    <?php //behöver hjälp med att connecta t rätt session user....
+   //kolla hur vi gjort på de andra sidorna, du behöver på nåt sätt
+   //få med userID för just den usern som ska du hämta info för
+   //T.ex. kan du använda $_SESSION för att spara ID:et och sen lägga in här
     $sql = "SELECT Username, Password, Email, Fullname FROM User WHERE UserID='$userID'";
         $stmt = $dbConn->prepare($sql);
         $stmt->bind_result($username, $password, $email, $fullname);
