@@ -82,3 +82,21 @@ function getRandomDestination() {
     $randomDest = rand(0, count($allDest)-1);
     return $allDest[$randomDest];
 }
+
+function callAPI($url) {
+    //starting the call
+    $cURLconn = curl_init();
+
+    //Setting headers
+    curl_setopt($cURLconn, CURLOPT_URL, $url);
+    curl_setopt($cURLconn, CURLOPT_RETURNTRANSFER, true);
+
+    //recieving response
+    $JSONresponse = curl_exec($cURLconn);
+    curl_close($cURLconn);
+    
+    //decoding the response
+    $response = json_decode($JSONresponse);
+
+    return $response;
+};

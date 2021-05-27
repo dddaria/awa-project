@@ -1,5 +1,4 @@
-<?php 
-include('header.php');  ?>
+<?php include('header.php');  ?>
 
 <?php 
     $DestID = $_GET['link'];
@@ -10,7 +9,7 @@ include('header.php');  ?>
             JOIN Continent AS con ON con.ContinentID = co.ContinentID
             WHERE DestinationID='$DestID'";
         $stmt = $dbConn->prepare($sql);
-        $stmt->bind_result($destName, $destDes, $destPic, $cityName, $countryName, $contentName, $vIndex);
+        $stmt->bind_result($destName, $destDes, $destPic, $cityName, $countryName, $continentName, $vIndex);
         $stmt->execute();
         $stmt->fetch();
         
@@ -25,33 +24,86 @@ include('header.php');  ?>
                 WHERE DestinationID='$DestID'";
 
         mysqli_query($dbConn, $sql1);
+
+        //Getting info from travelbriefing API for the specific country
+        $url = "https://travelbriefing.org/".$countryName."?format=json";
+        $response = callAPI($url);
 ?>
+
 <div class="destination-page">
     <div class="destination-top-div">
             <div class="destination-info-div"> 
-                <?php
-                    echo ' <h2 class="destination-header"> Welcome to '.$destName.' !</h2>
-                        <table class="destination-table"> 
-                            <tr>
-                                <th>Country:</th> <td>'.$countryName.'</td>
+                <h2 class="destination-header"> Welcome to <?php echo $destName ?> !</h2>
+                    <table class="destination-table"> 
+                        <tr>
+                            <th>Continent:</th> <td><?php echo $continentName ?></td>
+                        </tr>
+                        <tr>
+                            <th>Country:</th> <td><?php echo $countryName ?></td>
+                        </tr>
+                        <?php
+                        //fetching all the neighbours from the API
+                        $allNeighbours = "";
+                        for ($i = 0; $i < count($response->neighbors); $i++) {
+                            $allNeighbours = $allNeighbours . $response->neighbors[$i]->name . " ";
+                        }
+                        ?>
+                        <tr>
+                           <th>Neighbours:</th> <td><?php echo $allNeighbours; ?></td>
+                        </tr>
+                        <tr>
+                            <th>City:</th> <td><?php echo $cityName ?></td>
+                        </tr>
+                        <?php
+                        //fetching all the languages from the API
+                        $allLang = "";
+                        for ($i = 0; $i < count($response->language); $i++) {
+                            $allLang = $allLang . $response->language[$i]->language . " ";
+                        }
+                        ?>
+                        <tr>
+                            <th>Languages:</th> <td><?php echo $allLang ?></td>
+                        </tr>
+                        <tr>
+                            <th>Currency:</th> <td><?php echo $response->currency->name . " (".$response->currency->symbol.")"?></td>
+                        </tr>
+                        <?php
+                        if (empty($response->vaccinations)) {
+                            $allvacc = "No specific vaccines needed";
+                        } 
+                        else {
+                            //fetching all the vaccines from the API
+                            $allvacc = "";
+                            for ($i = 0; $i < count($response->vaccinations); $i++) {
+                               $allvacc = $allvacc . $response->vaccinations[$i]->name . " ";
+                            }
+                        }
+                        ?>
+                        <tr>
+                            <th>Necessary vaccines:</th> <td><?php echo $allvacc ?></td>
+                        </tr>
+                        <tr>
+                            <th>Calling code:</th> <td><?php echo $response->telephone->calling_code ?></td>
+                        </tr>
+                        <tr>
+                            <th>Emergency numbers:</th>
+                                <td>
+                                    <?php echo "Police: " . $response->telephone->police . ", " .
+                                    "Ambulance: " . $response->telephone->ambulance . ", " .
+                                    "Fire: " . $response->telephone->fire . "." ?>
+                                </td>
                             </tr>
-                            <tr>
-                                <th>City:</th> <td>'.$cityName.'</td>
-                            </tr>
-                        </table> ';
-                        ?> 
+                        <tr>
+                            <th>Water:</th> <td><?php echo $response->water->short ?></td>
+                        </tr>
+                    </table>
             </div>
-                <?php 
-                   echo' <div class="destination-image-div">'.$destPic.'</div>';
-                ?>
+            <div class="destination-image-div"><img src=<?php echo $destPic ?>></div>
     </div>
 
-                <?php      
-                    echo' <div class="destination-text-div">
-                    <p> '.$destDes.'</p>
-                    </div>';
-                
-                    ?>
+    <div class="destination-text-div">
+        <p> <?php echo $destDes ?></p>
+    </div>
                         
            
     
