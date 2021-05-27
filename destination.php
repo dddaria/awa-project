@@ -45,7 +45,14 @@
                         //fetching all the neighbours from the API
                         $allNeighbours = "";
                         for ($i = 0; $i < count($response->neighbors); $i++) {
-                            $allNeighbours = $allNeighbours . $response->neighbors[$i]->name . " ";
+                            if($i+1 == count($response->neighbors)) {
+                                $allNeighbours = $allNeighbours . $response->neighbors[$i]->name . ".";
+                            }
+                           else {
+                                $allNeighbours = $allNeighbours . $response->neighbors[$i]->name . ", ";
+                            }
+
+                            
                         }
                         ?>
                         <tr>
@@ -58,7 +65,12 @@
                         //fetching all the languages from the API
                         $allLang = "";
                         for ($i = 0; $i < count($response->language); $i++) {
-                            $allLang = $allLang . $response->language[$i]->language . " ";
+                            if($i+1 == count($response->language)) {
+                                $allLang = $allLang . $response->language[$i]->language . ".";
+                               }
+                               else {
+                                $allLang = $allLang . $response->language[$i]->language . ", ";    
+                                }
                         }
                         ?>
                         <tr>
@@ -75,7 +87,12 @@
                             //fetching all the vaccines from the API
                             $allvacc = "";
                             for ($i = 0; $i < count($response->vaccinations); $i++) {
-                               $allvacc = $allvacc . $response->vaccinations[$i]->name . " ";
+                               if($i+1 == count($response->vaccinations)) {
+                                $allvacc = $allvacc . $response->vaccinations[$i]->name . ".";
+                               }
+                               else {
+                                $allvacc = $allvacc . $response->vaccinations[$i]->name . ", ";
+                               }
                             }
                         }
                         ?>
