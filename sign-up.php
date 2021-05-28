@@ -46,6 +46,7 @@
 	}else if($email === $Email){
 		echo"Sorry this email already exists. Please try another one.";
 	}else{
+		//add user to database if it does not exist before
 		$sql="INSERT INTO User (Username, Password, Usertype, Email, Fullname) VALUES ('$uname', '$pass1', 'normal', '$email', 'fullname')";
 
 	}
