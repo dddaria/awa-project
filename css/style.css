@@ -325,6 +325,14 @@ text-transform: uppercase;
   margin: 60px auto 0 auto;
   padding-bottom: 15px;
 }
+.posted-comments th{
+  display: block;
+  width: 100%;
+}
+.posted-comments td{
+  display: block;
+  width: 100%;
+}
 
 /*********** Random destination *********************/
 .randomize {

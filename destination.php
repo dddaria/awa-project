@@ -137,12 +137,10 @@
     
   <div class="comments-div">
        
-        <?php
-            echo "<form class='comment-form' action='' method='POST'>
+   <form class='comment-form' action='' method='POST'>
                 
                 <h3> Write a comment</h3>
-                    <input style='display:hidden;' type='hidden' name='comDate' value='".date('Y-m-d H:i')."'>
-                    <input type='text' name='comName' placeholder='Your Name'>
+                     <input type='text' name='comName' placeholder='Your Name'>
                     
                     <input type='email' name='comEmail' placeholder='Email'>
             
@@ -150,23 +148,46 @@
                      </textarea>
                 
                 <button type='submit' value='Submit' name='comSubmit'>Submit</button>
-            </form>";
-        ?>
+            </form>
+          <?php
+            // if(isset($_POST['comName']) && isset($_POST['comEmail']) && isset($_POST['coment']) ){
+            //     $comName = $_POST['comName']; //om användaren fyllt i båda fälten så lägger vi in värdena i variabeln
+            //     $comEmail = $_POST['comEmail'];
+            //     $comment = $_POST['comment'];
+               
 
+            // }else{
+            //     setComment($_POST['comName'],$_POST['pass1'],$_POST['email'],$_POST['fullname']);
+            //     echo"Thank you for commenting!";
+            // } -->
+        
+	
+        ?>
         <div class='posted-comments'>
             <h3> Latest comments</h3>
+
             <?php
         $DestID = $_GET['link'];
-        $sql = "SELECT Comment, name FROM Comment WHERE DestinationID='$DestID'";
+            $sql = "SELECT Comment, Name FROM Comment WHERE DestinationID='$DestID'";
             $stmt = $dbConn->prepare($sql);
-            $stmt->bind_result($comment, $name);
+            $stmt->bind_result($comName, $Comment);
             $stmt->execute();
+           
             while ($stmt->fetch()) {
-                echo '<div class="posted-comments"> '.$name.'</div>';
-            echo '<div class="posted-comments"> '.$comment.'</div>';}
+                echo '
+                <table class="posted-comments"> 
+                <tr>
+                    <th>Continent:</th> <td><'.$comName.'</td>
+                </tr>
+                <tr>
+                    <th>Country:</th> <td>echo '.$comment.'</td>
+                </tr>';
+                }
+            
+              
             ?>
            
         </div>   
     </div>
-</div> <!-- destination page div -->
+</div> destination page div
 <?php include('footer.php');?>
