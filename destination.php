@@ -145,15 +145,15 @@
         <div class='posted-comments'>
             <h3> Latest comments</h3>
             <?php
-        // $DestID = $_GET['link'];
-        // $sql = "SELECT Comment, name FROM Comment WHERE DestinationID='$DestID'";
-        //     $stmt = $dbConn->prepare($sql);
-        //     $stmt->bind_result($comment, $name);
-        //     $stmt->execute();
-        //     $stmt->fetch();
+        $DestID = $_GET['link'];
+        $sql = "SELECT Comment, name FROM Comment WHERE DestinationID='$DestID'";
+            $stmt = $dbConn->prepare($sql);
+            $stmt->bind_result($comment, $name);
+            $stmt->execute();
+            while ($stmt->fetch()) {
 
-        //     echo $comment;
-        //     ?>
+            echo '<div class="posted-comments"> '.$comment.'</div>';}
+            ?>
            
         </div>   
     </div>
