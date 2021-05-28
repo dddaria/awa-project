@@ -58,7 +58,7 @@
 
     <div class="profile-right-div">
         <div class="profile-img-div">
-            <img class="profile-img" src="img/eiffel.jpeg">
+            <img class="profile-img" src="img/eiffel.jpg">
         </div> 
         <p class="change-profile-img" ><a>Change profile picture</a></p>
     </div>
