@@ -12,6 +12,7 @@
           echo "<li>";
           echo "<div class='text-on-img'>";
           echo '<a href="/awa-project/destination.php?link=' . $DestID . '">';
+          // här borde img foldern hittas istället och inte db namnet som $picture gör nu
          	echo '<img src="'.$Picture.'" class="img-fix" /></a>';
         	echo "</div>";
       	  echo "</li>";
