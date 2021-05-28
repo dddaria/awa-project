@@ -122,7 +122,6 @@
                 $stmt->bind_result($Picture);
                 $stmt->execute();
                     
-                    // echo '<a href="/awa-project/destination.php?link=' . $DestID . '">';
                     echo '<img src="img/'.$destPic.'" class="destination-img" /></a>';
                 ?>
         </div>
@@ -164,9 +163,8 @@
             <h3> Latest comments</h3>
 
             <?php
-        $DestID = $_GET['link'];
-        function getComments($dbConn){
-            $sql = "SELECT Name, Email, Comment FROM Comment WHERE DestinationID='$DestID'";
+
+            $sql = "SELECT Name, Comment FROM Comment WHERE DestinationID='$DestID'";
             $stmt = $dbConn->prepare($sql);
             $stmt->bind_result($comName, $Comment);
             $stmt->execute();
@@ -180,9 +178,8 @@
                 <tr>
                     <th>Country:</th> <td>echo '.$comment.'</td>
                 </tr>';
-                }  ;
-
-            }
+                };
+        
             ?>
            
         </div>   
