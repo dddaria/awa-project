@@ -166,7 +166,7 @@
 
             $sql = "SELECT Name, Comment FROM Comment WHERE DestinationID='$DestID'";
             $stmt = $dbConn->prepare($sql);
-            $stmt->bind_result($comName, $Comment);
+            $stmt->bind_result($comName, $comment);
             $stmt->execute();
 
             while ($stmt->fetch()) {
