@@ -53,6 +53,7 @@
 
 
 					header("location:/awa-project/account.php");
+					
 
 				}else if($uname === $Username && $pass === $Password && $Usertype === "Normal"){ 
 				 	
@@ -62,6 +63,7 @@
 					$_SESSION["UserIP"] = $_SERVER['REMOTE_ADDR'];
 
 					header("location:/awa-project/account.php");
+					
 				}
 
 			}

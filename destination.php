@@ -124,55 +124,53 @@
                     
                     // echo '<a href="/awa-project/destination.php?link=' . $DestID . '">';
                     echo '<img src="img/'.$destPic.'" class="destination-img" /></a>';
-                  
-                
                 ?>
         </div>
 
-    <div class="destination-text-div">
-        <p> <?php echo $destDes ?></p>
-    </div>
+            <div class="destination-text-div">
+                <p> <?php echo $destDes ?></p>
+            </div>
+     </div>
                         
-           <hr class="destination-divider">
+<hr class="destination-divider">
     
   <div class="comments-div">
-       
-   <form class='comment-form' action='' method='POST'>
+        <?php
+            // if($_SESSION["loggedin"] === "true"){    
+            //     echo '<form class="comment-form" action="" method="POST">';
+                            
+            //     echo   '<h3> Write a comment</h3>';
+            //     echo       '<input type="text" name="comName" placeholder="Your Name">';
+                        
+            //     echo     '<input type="email" name="comEmail" placeholder="Email">';
                 
-                <h3> Write a comment</h3>
-                     <input type='text' name='comName' placeholder='Your Name'>
+            //     echo     '<textarea class="commment_textarea"name="comment"placeholder="Type your comment here"> </textarea>';
                     
-                    <input type='email' name='comEmail' placeholder='Email'>
-            
-                    <textarea class='commment_textarea'name='comment'placeholder='Type your comment here'>
-                     </textarea>
-                
-                <button type='submit' value='Submit' name='comSubmit'>Submit</button>
-            </form>
-          <?php
-            // if(isset($_POST['comName']) && isset($_POST['comEmail']) && isset($_POST['coment']) ){
-            //     $comName = $_POST['comName']; //om användaren fyllt i båda fälten så lägger vi in värdena i variabeln
-            //     $comEmail = $_POST['comEmail'];
-            //     $comment = $_POST['comment'];
-               
-
-            // }else{
-            //     setComment($_POST['comName'],$_POST['pass1'],$_POST['email'],$_POST['fullname']);
-            //     echo"Thank you for commenting!";
-            // } -->
-        
-	
+            //     echo      '<button type="submit" value="Submit" name="comSubmit">Submit</button>
+            //         </form>';
         ?>
+            <form class="comment-form" action="" method="POST">
+                            
+                <h3> Write a comment</h3>
+                    <input type="text" name="comName" placeholder="Your Name">
+                                        
+                    <input type="email" name="comEmail" placeholder="Email">
+                                
+                    <textarea class="commment_textarea"name="comment"placeholder="Type your comment here"> </textarea>
+                    <button type="submit" value="Submit" name="comSubmit">Submit</button>
+                         </form>
+                
         <div class='posted-comments'>
             <h3> Latest comments</h3>
 
             <?php
         $DestID = $_GET['link'];
-            $sql = "SELECT Comment, Name FROM Comment WHERE DestinationID='$DestID'";
+        function getComments($dbConn){
+            $sql = "SELECT Name, Email, Comment FROM Comment WHERE DestinationID='$DestID'";
             $stmt = $dbConn->prepare($sql);
             $stmt->bind_result($comName, $Comment);
             $stmt->execute();
-           
+
             while ($stmt->fetch()) {
                 echo '
                 <table class="posted-comments"> 
@@ -182,12 +180,12 @@
                 <tr>
                     <th>Country:</th> <td>echo '.$comment.'</td>
                 </tr>';
-                }
-            
-              
+                }  ;
+
+            }
             ?>
            
         </div>   
     </div>
-</div> destination page div
+</div> 
 <?php include('footer.php');?>
