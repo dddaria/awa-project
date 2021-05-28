@@ -115,7 +115,20 @@
                         </tr>
                     </table>
             </div>
-            <div class="destination-image-div"><img src=<?php echo $destPic ?>></div>
+            <div class="destination-image-div">
+                <?php
+                $sql = "SELECT Picture FROM Destination WHERE DestinationID='$DestID'";
+                $stmt = $dbConn->prepare($sql);
+                $stmt->bind_result($Picture);
+                $stmt->execute();
+
+                
+                    echo "<div class='text-on-img'>";
+                    echo '<a href="/awa-project/destination.php?link=' . $DestID . '">';
+                    echo '<img src="img/'.$destPic.'" class="img-fix" /></a>';
+                    echo "</div>";
+                
+                ?>
     </div>
 
     <div class="destination-text-div">
