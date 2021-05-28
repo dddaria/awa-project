@@ -3,6 +3,18 @@ include ('connect.php');
 
 $currentPage = basename($_SERVER['PHP_SELF']);
 
+function signUp($uname,$pass1,$email,$fullname){
+    $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
+    $sql="INSERT INTO User (Username, Password, Usertype, Email, Fullname) VALUES ('$uname', '$pass1', 'normal', '$email', 'fullname')";
+     if(mysqli_query($dbConn, $sql)) {
+        echo "<br><p>You successfully signed up. Welcome!</p>";
+    }
+    else {
+        echo "<br><p class='warning'>Failed to sign up, please try again.</p>";
+    }
+
+};
+
 function fileUpload($file) {
     $filename = $_FILES['destImg']['name'];
     $destination = 'img/' . $filename;
@@ -82,6 +94,8 @@ function getRandomDestination() {
     $randomDest = rand(0, count($allDest)-1);
     return $allDest[$randomDest];
 }
+
+
 
 function callAPI($url) {
     //starting the call

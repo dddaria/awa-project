@@ -1,5 +1,6 @@
 <?php include('header.php');?>
 
+		<div class="signupbox">
 			<h1>SIGN UP</h1>
 
 				<form class="SignUpForm" action="" method="POST"> <!-- Form för login. POST skickar info, ej via url-->
@@ -46,8 +47,7 @@
 	}else if($email === $Email){
 		echo"Sorry this email already exists. Please try another one.";
 	}else{
-		$sql="INSERT INTO User (Username, Password, Usertype, Email, Fullname) VALUES ('$uname', '$pass1', 'normal', '$email', 'fullname')";
-
+		signUp($_POST['uname'],$_POST['pass1'],$_POST['email'],$_POST['fullname']);
 	}
 
 	}
