@@ -53,25 +53,23 @@ function destUpload($destName, $destDes, $destCity, $destImg) {
 
 function setComments($dbConn){
     //if the submit button for comment is clicked this info is inserted into the database
-    if (isset($_POST['commentSubmit'])){
-        $comName = $_POST['comName'];
-        $comEmail = $_POST['comEmail'];
-        $comment = $_POST['comment'];
-
-        $sql = "INSERT INTO Comment (Name, Email, Comment) VALUES ('$comName', '$comEmail', '$comment'";
-        $result = $dbConn->query($sql);
-
-        echo "Thank you for commenting!";
-        if (empty($comName) || empty($comEmail) || empty($comment)) {
-            echo "<br><p>You successfully signed up. Welcome!</p>";
-        }
-        else {
-            echo "Be sure that you have filled in every field!s";
-        }
-     }
-   
-
-}
+    if (isset($_POST['comSubmit'])){
+        // if(empty($comName) || empty($comEmail) || empty($comment)) {
+        //     echo "<p class='warning'> Be sure that you have filled in every field!s</p>";
+        // }
+        // else  {
+            $comName = $_POST['comName'];
+            $comEmail = $_POST['comEmail'];
+            $comment = $_POST['comment'];
+    
+            $sql = "INSERT INTO Comment (Name, Email, Comment) VALUES ('$comName', '$comEmail', '$comment'";
+            $result = $dbConn->query($sql);
+    
+            echo "<p> Thank you for commenting!</p>";
+        // }
+        
+     }  
+};
 
 // function getComments($dbConn){
 // $sql ="SELECT * FROM Comments";
