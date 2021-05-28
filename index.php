@@ -1,9 +1,5 @@
 <?php include('header.php');?>
 
-<!DOCTYPE html>
-
-<html>
-	<body>
 
 	<div class="slideshow-container">
 
@@ -58,12 +54,6 @@
 		</script>
 
 
-
-
-
-
-	</body>
-</html>
 
 
 <?php include('footer.php');?>
