@@ -123,7 +123,7 @@
                 $stmt->execute();
 
                 
-                    echo "<div class='text-on-img'>";
+                    echo "<div class='imgDestination'>";
                     echo '<a href="/awa-project/destination.php?link=' . $DestID . '">';
                     echo '<img src="img/'.$destPic.'" class="img-fix" /></a>';
                     echo "</div>";

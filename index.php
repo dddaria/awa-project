@@ -5,18 +5,18 @@
 
  
 		  <div class="mySlides fade">
-			    <img src="img/eiffeltower.jpeg">
+			    <img src="img/eiffel.jpg">
 			    <div class="textSlider">EIFFEL TOWER</div>
 		  </div>
 
 		  <div class="mySlides fade">
-			    <img src="img/machupicchu.jpeg">
-			    <div class="textSlider">MACHU PICCHU</div>
+			    <img src="img/bigben.jpg">
+			    <div class="textSlider">BIG BEN</div>
 		  </div>
 
 		  <div class="mySlides fade">
-			    <img src="img/angkorWat.jpeg">
-			    <div class="textSlider">ANGKOR WAT</div>
+			    <img src="img/forbiddencity.jpg">
+			    <div class="textSlider">FORBIDDEN CITY</div>
 		  </div>
 
 		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

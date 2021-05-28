@@ -129,7 +129,8 @@ padding-inline-start: 0px !important;
 }
 
 .mySlides img{
-    width:100%;
+  margin:0px;
+  width:100%;
 }
 
 .prev, .next {
