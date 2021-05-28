@@ -41,7 +41,7 @@
 		
 		$stmt->execute();
 
-	while($stmt->fetch()){
+
 	if($uname === $Username){
 		echo"Sorry this username already exists. Please try another one.";
 	}else if($email === $Email){
@@ -50,7 +50,7 @@
 		signUp($_POST['uname'],$_POST['pass1'],$_POST['email'],$_POST['fullname']);
 	}
 
-	}
+	
 		
 
 
