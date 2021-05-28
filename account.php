@@ -4,6 +4,8 @@
     if($_SESSION["loggedin"] !== "true"){
     header("location:/awa-project/login.php"); //kollar om man är inloggad. annars flyttar till login
     }
+
+
 ?>
 
 <form class="LogOutButt" action="" method="POST">
@@ -17,11 +19,11 @@
     header("location:/awa-project/login.php");
     }      
 ?>
-   <?php //behöver hjälp med att connecta t rätt session user....
-   //kolla hur vi gjort på de andra sidorna, du behöver på nåt sätt
-   //få med userID för just den usern som ska du hämta info för
-   //T.ex. kan du använda $_SESSION för att spara ID:et och sen lägga in här
-    $sql = "SELECT Username, Password, Email, Fullname FROM User WHERE UserID='$userID'";
+   <?php
+   
+   $user = ($_SESSION["UserName"]);
+
+    $sql = "SELECT Username, Password, Email, Fullname FROM User WHERE Username ='$user'";
         $stmt = $dbConn->prepare($sql);
         $stmt->bind_result($username, $password, $email, $fullname);
         $stmt->execute();
@@ -33,10 +35,10 @@
 <div class="profile-page">
     <div class="profile-info-div"> 
         <?php
-        echo '        <h2 class="profile-header"> Welcome $name !</h2>
+        echo '        <h2 class="profile-header"> Welcome!</h2>
         <table class="profile-table"> 
                 <tr>
-                    <th>Phone:</th> <td>'.$fullname.'</td>
+                    <th>Fullname:</th> <td>'.$fullname.'</td>
                 </tr>
                 <tr>
                     <th>Username:</th> <td>'.$username.'</td>
