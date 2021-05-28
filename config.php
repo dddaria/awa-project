@@ -73,17 +73,18 @@ function setComments($dbConn){
 
 }
 
-function getComments($dbConn){
-$sql ="SELECT * FROM Comments";
-$result = $dbConn->query($sql);
-while ($row = $result->fetch_assoc()){
-    echo"<div class='posted-comments'><p>";  
-        echo $row['name']. "<br>";
-        //inserts HTML line breaks before all newlines in a string
-        echo nl2br($row['comment']);
-    echo"</p></div>";
-    }
-}
+// function getComments($dbConn){
+// $sql ="SELECT * FROM Comments";
+// $result = $dbConn->query($sql);
+// while ($row = $result->fetch_assoc()){
+//     echo"<div class='posted-comments'><p>";  
+//         echo $row['name']. "<br>";
+//         //inserts HTML line breaks before all newlines in a string
+//         echo nl2br($row['comment']);
+//     echo"</p></div>";
+//     }
+// }
+
 
 function getRandomDestination() {
     $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
