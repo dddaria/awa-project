@@ -7,6 +7,10 @@
         $stmt = $dbConn->prepare($sql);
         $stmt->bind_result($DestID, $Name, $Picture);
         $stmt->execute();
+        // $images = glob("img/*.*");
+        // foreach($images as $image){
+        //   echo '<img src="'.$Picture.'" class="img-fix" />';
+        // }
         
         while ($stmt->fetch()) {
           echo "<li>";
