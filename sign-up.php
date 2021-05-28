@@ -47,7 +47,13 @@
 	}else if($email === $Email){
 		echo"Sorry this email already exists. Please try another one.";
 	}else{
+<<<<<<< HEAD
 		signUp($_POST['uname'],$_POST['pass1'],$_POST['email'],$_POST['fullname']);
+=======
+		//add user to database if it does not exist before
+		$sql="INSERT INTO User (Username, Password, Usertype, Email, Fullname) VALUES ('$uname', '$pass1', 'normal', '$email', 'fullname')";
+
+>>>>>>> origin/main
 	}
 
 	

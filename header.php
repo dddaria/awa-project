@@ -58,13 +58,7 @@ session_start();
 					</div>
 				
 					<div class="header_left">
-						<li>
-							<div class="search-container">
-								<form action="">
-									<input type="text" placeholder="Search.." name="search">
-								</form>
-						</div>
-						</li>
+
 						
 						<li>
 							<div class="fav-div">
