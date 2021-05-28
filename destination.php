@@ -32,8 +32,8 @@
 
 <div class="destination-page">
     <div class="destination-top-div">
+        <h2 class="destination-header"> Welcome to <?php echo $destName ?> !</h2>
             <div class="destination-info-div"> 
-                <h2 class="destination-header"> Welcome to <?php echo $destName ?> !</h2>
                     <table class="destination-table"> 
                         <tr>
                             <th>Continent:</th> <td><?php echo $continentName ?></td>
@@ -45,21 +45,20 @@
                         //fetching all the neighbours from the API
                         $allNeighbours = "";
                         for ($i = 0; $i < count($response->neighbors); $i++) {
+                            //If there are more left, add a comma to seperate them otherwise a dottelidott
                             if($i+1 == count($response->neighbors)) {
                                 $allNeighbours = $allNeighbours . $response->neighbors[$i]->name . ".";
                             }
                            else {
                                 $allNeighbours = $allNeighbours . $response->neighbors[$i]->name . ", ";
-                            }
-
-                            
+                            }                            
                         }
                         ?>
                         <tr>
                            <th>Neighbours:</th> <td><?php echo $allNeighbours; ?></td>
                         </tr>
                         <tr>
-                            <th>City:</th> <td><?php echo $cityName ?></td>
+                            <th>City:</th> <td><?php echo $cityName; ?></td>
                         </tr>
                         <?php
                         //fetching all the languages from the API
@@ -74,10 +73,10 @@
                         }
                         ?>
                         <tr>
-                            <th>Languages:</th> <td><?php echo $allLang ?></td>
+                            <th>Languages:</th> <td><?php echo $allLang; ?></td>
                         </tr>
                         <tr>
-                            <th>Currency:</th> <td><?php echo $response->currency->name . " (".$response->currency->symbol.")"?></td>
+                            <th>Currency:</th> <td><?php echo $response->currency->name . " (".$response->currency->symbol.")";?></td>
                         </tr>
                         <?php
                         if (empty($response->vaccinations)) {
@@ -97,45 +96,44 @@
                         }
                         ?>
                         <tr>
-                            <th>Necessary vaccines:</th> <td><?php echo $allvacc ?></td>
+                            <th>Necessary vaccines:</th> <td><?php echo $allvacc; ?></td>
                         </tr>
                         <tr>
-                            <th>Calling code:</th> <td><?php echo $response->telephone->calling_code ?></td>
+                            <th>Calling code:</th> <td><?php echo $response->telephone->calling_code; ?></td>
                         </tr>
                         <tr>
                             <th>Emergency numbers:</th>
                                 <td>
                                     <?php echo "Police: " . $response->telephone->police . ", " .
                                     "Ambulance: " . $response->telephone->ambulance . ", " .
-                                    "Fire: " . $response->telephone->fire . "." ?>
+                                    "Fire: " . $response->telephone->fire . "." ;?>
                                 </td>
                             </tr>
                         <tr>
-                            <th>Water:</th> <td><?php echo $response->water->short ?></td>
+                            <th>Water:</th> <td><?php echo $response->water->short; ?></td>
                         </tr>
                     </table>
-            </div>
-            <div class="destination-image-div">
+        </div>
+
+        <div class="destination-img-div">
                 <?php
                 $sql = "SELECT Picture FROM Destination WHERE DestinationID='$DestID'";
                 $stmt = $dbConn->prepare($sql);
                 $stmt->bind_result($Picture);
                 $stmt->execute();
-
-                
-                    echo "<div class='imgDestination'>";
-                    echo '<a href="/awa-project/destination.php?link=' . $DestID . '">';
-                    echo '<img src="img/'.$destPic.'" class="img-fix" /></a>';
-                    echo "</div>";
+                    
+                    // echo '<a href="/awa-project/destination.php?link=' . $DestID . '">';
+                    echo '<img src="img/'.$destPic.'" class="destination-img" /></a>';
+                  
                 
                 ?>
-    </div>
+        </div>
 
     <div class="destination-text-div">
         <p> <?php echo $destDes ?></p>
     </div>
                         
-           
+           <hr class="destination-divider">
     
   <div class="comments-div">
        
@@ -164,7 +162,7 @@
             $stmt->bind_result($comment, $name);
             $stmt->execute();
             while ($stmt->fetch()) {
-
+                echo '<div class="posted-comments"> '.$name.'</div>';
             echo '<div class="posted-comments"> '.$comment.'</div>';}
             ?>
            
