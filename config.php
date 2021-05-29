@@ -51,7 +51,7 @@ function destUpload($destName, $destDes, $destCity, $destImg) {
     }
 };
 
-function setComments($dbConn){
+function setComments($dbConn){ // $comName, $comEmail, $comment??
     //if the submit button for comment is clicked this info is inserted into the database
     if (isset($_POST['comSubmit'])){
         // if(empty($comName) || empty($comEmail) || empty($comment)) {
@@ -70,6 +70,7 @@ function setComments($dbConn){
         
      }  
 };
+
 
 function getComments($dbConn){
 $sql ="SELECT * FROM Comments";
