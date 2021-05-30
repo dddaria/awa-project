@@ -163,23 +163,24 @@
             <h3> Latest comments</h3>
 
             <?php
+            //Opening connection again to fetch comments
+            $dbConn = mysqli_connect($host, $user, $password, $database);
 
             $sql = "SELECT Name, Comment FROM Comment WHERE DestinationID='$DestID'";
             $stmt = $dbConn->prepare($sql);
-            $stmt->bind_param($comName, $comment);
+            $stmt->bind_result($comName, $comment);
             $stmt->execute();
-            
             while ($stmt->fetch()) {
-                echo '
-                <table class="posted-comments"> 
-                <tr>
-                    <th>Continent:</th> <td><'.$comName.'</td>
-                </tr>
-                <tr>
-                    <th>Country:</th> <td>echo '.$comment.'</td>
-                </tr>';
-                };
-        
+                echo "<table class='posted-comments'>";
+                echo "<tr>
+                        <th>Name:</th> <td>".$comName."</td>
+                    </tr>";
+                echo "<tr>
+                        <th>Comment:</th> <td>".$comment."</td>
+                     </tr>";
+            }
+            echo "</table>";
+            $dbConn->close();
             ?>
            
         </div>   
