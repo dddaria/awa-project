@@ -52,8 +52,6 @@ function destUpload($destName, $destDes, $destCity, $destImg) {
 };
 
 function setComment($comName, $comEmail, $comment) {
-    // commentUpload($destImg);
-    // $destImg = $_FILES['destImg']['name'];
 
     $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
 

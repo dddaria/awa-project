@@ -160,6 +160,7 @@
                          </form>
 
                          <?php
+                        
                          if (isset($_POST['comSubmit'])) {
                             setComment($_POST['comName'], $_POST['comEmail'], $_POST['comment']);
         }
@@ -177,7 +178,6 @@
             $stmt = $dbConn->prepare($sql);
             $stmt->bind_result($comName, $comment);
             $stmt->execute();
-           // echo "<table class='posted-comments'>";
             while ($stmt->fetch()) {
                 
                 echo "<tr>
@@ -185,8 +185,8 @@
                     </tr>";
             
             }
-            echo $comment;
-           // echo "</table>";
+
+           
             $dbConn->close();
             ?>
             </table>
