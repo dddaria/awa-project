@@ -156,12 +156,19 @@
                     <input type="email" name="comEmail" placeholder="Email">
                                 
                     <textarea class="commment_textarea"name="comment"placeholder="Type your comment here"> </textarea>
-                    <button type="submit" value="Submit" name="comSubmit">Submit</button>
+                    <button type="submit" value="1" name="comSubmit">Submit</button>
                          </form>
-                
+
+                         <?php
+                         if (isset($_POST['comSubmit'])) {
+                            setComment($_POST['comName'], $_POST['comEmail'], $_POST['comment']);
+        }
+        ?>
+
+<hr class="destination-divider">        
         <div class='posted-comments'>
             <h3> Latest comments</h3>
-
+            <table class='posted-comments-table'>
             <?php
             //Opening connection again to fetch comments
             $dbConn = mysqli_connect($host, $user, $password, $database);
@@ -170,18 +177,19 @@
             $stmt = $dbConn->prepare($sql);
             $stmt->bind_result($comName, $comment);
             $stmt->execute();
+           // echo "<table class='posted-comments'>";
             while ($stmt->fetch()) {
-                echo "<table class='posted-comments'>";
+                
                 echo "<tr>
-                        <th>Name:</th> <td>".$comName."</td>
+                        <th>".$comName."</th> <td>".$comment."</td>
                     </tr>";
-                echo "<tr>
-                        <th>Comment:</th> <td>".$comment."</td>
-                     </tr>";
+            
             }
-            echo "</table>";
+            echo $comment;
+           // echo "</table>";
             $dbConn->close();
             ?>
+            </table>
            
         </div>   
     </div>

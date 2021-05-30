@@ -278,12 +278,12 @@ main .destGrid{
 }
 .destination-divider{
   border-top: 1px solid #658b6f;
-  margin: 30px auto 60px auto;
-  width: 90%;
+  margin: 30px auto 30px auto;
+  width: 100%;
 }
 
 .comments-div{
-  width: 80%;
+
   margin: 30px auto;
 }
 .comment-form{
@@ -320,18 +320,32 @@ font-weight: bold;
 color: #fff;
 text-transform: uppercase;
 }
-.posted-comments{
-  border-bottom: #658b6f solid 2px;
-  margin: 60px auto 0 auto;
+.posted-comments {
+  width: 60%;
+  margin: 30px auto;
+}
+
+.posted-comments-table {
+  width: 100%;
+}
+
+.posted-comments-table tr{
+  border-bottom: #658b6f solid 1px;
+  margin: 30px auto 30px auto;
   padding-bottom: 15px;
-}
-.posted-comments th{
-  display: block;
+  display:block;
   width: 100%;
 }
-.posted-comments td{
+.posted-comments-table th{
   display: block;
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left !important;
+}
+.posted-comments-table td{
+  display: block;
+  width: 60%;
+  margin: 0 auto;
 }
 
 /*********** Random destination *********************/

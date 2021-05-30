@@ -51,25 +51,39 @@ function destUpload($destName, $destDes, $destCity, $destImg) {
     }
 };
 
-function setComments($dbConn){ // $comName, $comEmail, $comment??
-    //if the submit button for comment is clicked this info is inserted into the database
-    if (isset($_POST['comSubmit'])){
-        // if(empty($comName) || empty($comEmail) || empty($comment)) {
-        //     echo "<p class='warning'> Be sure that you have filled in every field!s</p>";
-        // }
-        // else  {
-            $comName = $_POST['comName'];
-            $comEmail = $_POST['comEmail'];
-            $comment = $_POST['comment'];
-    
-            $sql = "INSERT INTO Comment (Name, Email, Comment) VALUES ('$comName', '$comEmail', '$comment'";
-            $result = $dbConn->query($sql);
-    
-            echo "<p> Thank you for commenting!</p>";
-        // }
-        
-     }  
+function setComment($comName, $comEmail, $comment) {
+    // commentUpload($destImg);
+    // $destImg = $_FILES['destImg']['name'];
+
+    $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
+
+    $sql = "INSERT INTO Comment (Name, Email, Comment) VALUES ('$comName', '$comEmail', '$comment' )";
+    if(mysqli_query($dbConn, $sql)) {
+        echo "<br><p>Comment added!</p>";
+    }
+    else {
+        echo "<br><p class='warning'>Failed to upload comment. Try again.</p>";
+    }
 };
+// function setComments($dbConn){ // $comName, $comEmail, $comment??
+//     //if the submit button for comment is clicked this info is inserted into the database
+//     if (isset($_POST['comSubmit'])){
+//         // if(empty($comName) || empty($comEmail) || empty($comment)) {
+//         //     echo "<p class='warning'> Be sure that you have filled in every field!s</p>";
+//         // }
+//         // else  {
+//             $comName = $_POST['comName'];
+//             $comEmail = $_POST['comEmail'];
+//             $comment = $_POST['comment'];
+    
+//             $sql = "INSERT INTO Comment (Name, Email, Comment) VALUES ('$comName', '$comEmail', '$comment')";
+//             $result = $dbConn->query($sql);
+    
+//             echo "<p> Thank you for commenting!</p>";
+//         // }
+        
+//      }  
+// };
 
 
 function getComments($dbConn){
