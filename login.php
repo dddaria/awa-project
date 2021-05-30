@@ -2,8 +2,10 @@
 
 
 <?php
-	if($_SESSION["loggedin"] === "true"){
-	header("location:/awa-project/account.php");
+	if(isset($_SESSION["loggedin"])){
+		if($_SESSION["loggedin"] === "true"){
+			header("location:/awa-project/account.php");
+			}
 	}
 ?>
 		<div class=loginBox>
