@@ -15,6 +15,30 @@ function signUp($uname,$pass1,$email,$fullname){
 
 };
 
+function ifSaved($destID,$userID){
+    $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
+    $sql = "SELECT  sd.DestinationID, sd.UserID
+            FROM SavedDestination AS sd
+            JOIN Destination AS d ON sd.DestinationID = d.DestinationID
+            JOIN User AS u ON u.UserID = sd.UserID
+            WHERE sd.DestinationID = '$destID' AND sd.UserID = '$userID'";
+
+    $stmt = $dbConn->prepare($sql);
+    $stmt->bind_result($Dest, $User);
+    $stmt->execute();
+        $stmt->fetch();
+
+
+    if (isset($Dest)){
+       return "1"; 
+    }else{
+        return "0";
+    }
+
+}
+
+
+
 function fileUpload($file) {
     $filename = $_FILES['destImg']['name'];
     $destination = 'img/' . $filename;
@@ -51,16 +75,17 @@ function destUpload($destName, $destDes, $destCity, $destImg) {
     }
 };
 
-function setComment($comName, $comEmail, $comment) {
+function setComment($destID, $comName, $comEmail, $comment) {
 
     $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
 
-    $sql = "INSERT INTO Comment (Name, Email, Comment) VALUES ('$comName', '$comEmail', '$comment' )";
+    $sql = "INSERT INTO Comment (DestinationID, Name, Email, Comment) VALUES ('$destID','$comName', '$comEmail', '$comment' )";
     if(mysqli_query($dbConn, $sql)) {
         echo "<br><p>Comment added!</p>";
     }
     else {
         echo "<br><p class='warning'>Failed to upload comment. Try again.</p>";
+        echo $dbConn -> error;
     }
 };
 // function setComments($dbConn){ // $comName, $comEmail, $comment??

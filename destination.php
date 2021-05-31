@@ -1,7 +1,65 @@
 <?php include('header.php');  ?>
 
+
+  
+
 <?php 
-    $DestID = $_GET['link'];
+
+$loggedin = "false";
+
+$DestID = $_GET['link'];
+if (isset($_SESSION['UserID'])){
+    $UserID = $_SESSION['UserID'];
+    $SavedDest = ifSaved($DestID,$UserID);}
+
+if (isset($_SESSION['loggedin'])){
+    $loggedin = $_SESSION['loggedin'];
+  }
+
+  if($loggedin === "true"){
+    if($SavedDest == 0){
+        echo "<form class='LogOutButt' action='' method='POST'>" ;
+        echo "<input type='submit' name='saveDest' value='Save Destination'>";
+        echo "</form>";
+
+         if(isset($_POST['saveDest'])){
+        $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
+        $sql = "INSERT INTO SavedDestination (UserID, DestinationID) VALUES ('$UserID', '$DestID')";
+        mysqli_query($dbConn, $sql);
+        header("Refresh:0");
+    }
+
+    }else if($SavedDest == 1){
+        echo "<form class='LogOutButt' action='' method='POST'>" ;
+        echo "<input type='submit' name='saveDest' value='Remove Destination'>";
+        echo "</form>";
+
+         if(isset($_POST['saveDest'])){
+        $dbConn = mysqli_connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
+        $UserID = $_SESSION['UserID'];
+        $sql = "DELETE FROM SavedDestination WHERE DestinationID = '$DestID' AND UserID = '$UserID' ";
+        mysqli_query($dbConn, $sql);
+        header("Refresh:0");
+
+        }
+    }
+
+
+        
+}
+
+
+
+  
+
+
+         
+    
+
+       
+
+
+    
     $sql = "SELECT d.Name, d.Description, d.Picture, c.Name, co.Name, con.Name, d.ViewedIndex
             FROM Destination AS d
             JOIN City AS c ON d.CityID = c.CityID
@@ -151,18 +209,20 @@
             <form class="comment-form" action="" method="POST">
                             
                 <h3> Write a comment</h3>
-                    <input type="text" name="comName" placeholder="Your Name">
+
+                    <input type="hidden" name="destID" value= <?php echo $DestID ?> > 
+                    <input type="text" name="comName" placeholder="Your Name" required>
                                         
-                    <input type="email" name="comEmail" placeholder="Email">
+                    <input type="email" name="comEmail" placeholder="Email" required>
                                 
-                    <textarea class="commment_textarea"name="comment"placeholder="Type your comment here"> </textarea>
+                    <textarea class="commment_textarea"name="comment"placeholder="Type your comment here" required> </textarea>
                     <button type="submit" value="1" name="comSubmit">Submit</button>
                          </form>
 
                          <?php
                         
                          if (isset($_POST['comSubmit'])) {
-                            setComment($_POST['comName'], $_POST['comEmail'], $_POST['comment']);
+                            setComment($_POST['destID'], $_POST['comName'], $_POST['comEmail'], $_POST['comment']);
         }
         ?>
 

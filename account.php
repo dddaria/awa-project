@@ -10,7 +10,12 @@
 
 <form class="LogOutButt" action="" method="POST">
     <input type="submit" name="LogOut" value="Log Out">
+    <?php
+        if($_SESSION["UserType"] === "Admin"){
+            echo "<a class='newDestButt' href='/awa-project/add-new-destination.php'>Add new destination</a>";}
+    ?>
 </form>
+
 
 <?php
     if(isset($_POST['LogOut'])){
@@ -18,12 +23,13 @@
     $_SESSION["loggedin"] = "false";
     header("location:/awa-project/login.php");
     }      
+    
 ?>
    <?php
    
-   $user = ($_SESSION["UserName"]);
+   $user = $_SESSION["UserID"];
 
-    $sql = "SELECT Username, Password, Email, Fullname FROM User WHERE Username ='$user'";
+    $sql = "SELECT Username, Password, Email, Fullname FROM User WHERE UserID ='$user'";
         $stmt = $dbConn->prepare($sql);
         $stmt->bind_result($username, $password, $email, $fullname);
         $stmt->execute();
@@ -58,10 +64,13 @@
 
     <div class="profile-right-div">
         <div class="profile-img-div">
-            <img class="profile-img" src="img/eiffel.jpg">
+            <img class="profile-img" src="img/person.png">
         </div> 
         <!-- <p class="change-profile-img" ><a>Change profile picture</a></p> -->
     </div>
 </div> 
+ 
+
+
 
 <?php include('footer.php');?>

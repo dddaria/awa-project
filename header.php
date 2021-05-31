@@ -27,7 +27,7 @@ session_start();
 					<!-- <div class="header_right"> -->
 						<li>
 							<div class="logodiv">
-								<a href="index.php"><img src="img/logo.png" class="logoheader" class="
+								<a href="index.php"><img src="img/explore.png" class="logoheader" class="
 								<?php 
 								// current or '' because it is the Index page
 								echo($currentPage == 'index.php' || $currentPage == '') ? 'activelink' :''?>"> </a>
@@ -62,16 +62,29 @@ session_start();
 						
 						<li>
 							<div class="fav-div">
-								<a href="favorite-destinations.php"><img src="img/favorite-icon.png" class="fav-icon" class="
+								<a href="favorite-destinations.php"><img src="img/heart.png" class="fav-icon" class="
 								<?php
 								echo ($currentPage == 'favorite-destinations.php' )?'activelink' :''
 								?>"> </a>
 								</div>
 							</li>
 						<li>
-							<h1><a href="login.php" class="<?php
-							echo ($currentPage == 'login.php' )?'activelink' :''
-							?>">Log in</a></h1>
+							<?php 
+							if (isset($_SESSION['loggedin'])){ 
+							if($_SESSION['loggedin']=== "true"){
+								echo "<h1><a href='account.php' class='";
+								echo ($currentPage == 'account.php' )?'activelink' :'';
+								echo "'>My Account</a></h1>";
+							}}else{
+								echo "<h1><a href='login.php' class='";
+								echo ($currentPage == 'login.php' )?'activelink' :'';
+								echo "'>Log in</a></h1>";	
+							
+							}
+						
+
+							?>
+							
 						</li>
 						
 					<!-- </div> -->

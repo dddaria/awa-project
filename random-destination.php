@@ -9,16 +9,16 @@
         if(isset($_GET['randomize'])) {
             $randomDestID = getRandomDestination();
 
-            $sql = "SELECT Name, Picture FROM destination WHERE DestinationID =".$randomDestID;
+            $sql = "SELECT Name, Picture, DestinationID FROM Destination WHERE DestinationID ='$randomDestID'";
             $stmt = $dbConn->prepare($sql);
-            $stmt->bind_result($name, $pic);
+            $stmt->bind_result($name, $pic, $DestID);
             $stmt->execute();
             $stmt->fetch();
 
             echo "<div id='random-destination'>";
             echo "<h1>You should check out ".$name."</h1>";
-            echo "<img src='".$pic."' alt='pic of destination'/><br>";
-            echo "<a href='destination.php'>Read more...</a>";
+            echo "<img src='img/".$pic."' alt='pic of destination'/><br>";
+            echo '<a href="/awa-project/destination.php?link=' . $DestID . '">Read more...</a>';
             echo "</div>";
         };
     ?>
