@@ -60,11 +60,10 @@ header {
     color: #658b6f ;
 }
 .activelink{
-    border-bottom:#658b6f !important;
     text-underline-offset: 4px;
+    text-underline-position: 4px;
     text-decoration: underline !important;
 }
-
 
 .fav-icon {
   padding-top:20px;
@@ -80,17 +79,14 @@ header {
 .logodiv {
     width:5vw;
     float: left;
-    padding-right: 2vw;
+    padding-right: 30px;
 }
 
 .fav-div {
     width:5vw;
     float: left;
-    padding-right: 2vw;
+    padding: 0 30px;
 }
-
-
-
 
 /******** Home Page ************/
 .slideshow-container{

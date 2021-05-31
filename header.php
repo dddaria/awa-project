@@ -26,7 +26,7 @@ session_start();
 	<header>
 			<div id="topnavDIV">
 				<ol class="top-nav">
-					<!-- <div class="header_right"> -->
+					
 						<li>
 							<div class="logodiv">
 								<a href="index.php"><img src="img/explore.png" class="logoheader" class="
@@ -35,9 +35,7 @@ session_start();
 								echo($currentPage == 'index.php' || $currentPage == '') ? 'activelink' :''?>"> </a>
 							</div>
 						</li>
-					<!-- </div>
-				
-					<div class="header_middle"> -->
+					
 						<li>
 							<h1><a href="popular-destinations.php" class="<?php
 							echo ($currentPage == 'popular-destinations.php')?'activelink' :''
@@ -58,9 +56,6 @@ session_start();
 							echo ($currentPage == 'about-us.php' )?'activelink' :''
 							?>">About Us</a></h1>
 						</li>
-					<!-- </div>
-				
-					<div class="header_left"> -->
 
 						
 						<li>
