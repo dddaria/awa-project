@@ -22,7 +22,7 @@ session_start();
 <body>
 	
 	<header>
-			<!-- <div id="topnavDIV"> -->
+			<div id="topnavDIV">
 				<ol class="top-nav">
 					<!-- <div class="header_right"> -->
 						<li>
@@ -89,7 +89,7 @@ session_start();
 						
 					<!-- </div> -->
 				</ol>
-			<!-- </div> end of header div -->
+			</div> <!-- end of header div -->
 		</header>
 <?php include ('config.php'); ?>
 <?php include ('connect.php'); ?>
