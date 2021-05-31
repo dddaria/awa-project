@@ -36,17 +36,17 @@ header {
 }
 
 .top-nav {
-    width: 90%;
     margin: 0 auto;
     list-style: none;
-}
-#topnavDIV ol {
-padding-inline-start: 0px !important;
+    padding-inline-start: 0px !important;
+    display: inline-block;
+    width: 100%;
+    padding-left: 0;
 }
 
 .top-nav li {
     line-height:5vw;
-    float:left;
+    /* float:left; */
     margin-top: 1%;	
     text-transform: uppercase;
 }
@@ -57,13 +57,13 @@ padding-inline-start: 0px !important;
 }
 
 .top-nav a {
-    text-decoration: one;
+    text-decoration: none;
     color: #658b6f ;
 }
 .activelink{
-    color:#664430 !important;
+    border-bottom:#658b6f !important;
 }
-.header_right{
+/* .header_right{
     padding-right: 4vw;
     display: inline-block;
    
@@ -75,7 +75,7 @@ padding-inline-start: 0px !important;
 .header_left{
     padding-left: 6vw;
     display: inline-block;
-}
+} */
 
 .fav-icon {
     max-width:100%;
