@@ -4,7 +4,6 @@ include('header.php');
 if($_SESSION["UserType"] !== "Admin")
 {
     header("location:/awa-project/account.php");
-    echo "You cannot access the page";
 };
 
 ?>

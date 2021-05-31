@@ -98,24 +98,8 @@ padding-inline-start: 0px !important;
     padding-right: 2vw;
 }
 
-.search-container button:hover {
-  background: #ccc;
-  
-}
 
-.search-container input[type=text] {
-  padding: 3%;
-  margin: 6.5% 0% 0% -10%;
-  font-size: 1.35vw;
-  border: solid;
-  border-color: #658b6f ;
-  border-radius: 5%;
-}
 
-.search-container {
-    padding-left:2vw;
-    width:100%;
-}
 
 /******** Home Page ************/
 .slideshow-container{
@@ -425,7 +409,8 @@ text-transform: uppercase;
 }
 
 #destinationUpload button:hover {
-  background-color: #93caa2;
+  opacity: 0.7;
+
 }
 
 
@@ -578,6 +563,7 @@ input[type=submit]:hover {
   height: 250px;
   overflow: hidden;
   border-radius: 50%;
+  border: solid #658b6f;
   
 }
 .profile-img{
@@ -597,8 +583,28 @@ input[type=submit]:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-left:80%;
+  float:right;
+  margin-right:10%;
   margin-top:30px;
+}
+
+.newDestButt{
+  float:right;
+  background-color: #658b6f;
+  color:white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  margin-top:30px;
+  margin-right:10px;
+
+}
+
+.newDestButt:hover {
+  opacity: 0.7;
+}
+
+a.newDestButt{
+  font-size:13px;
 }
 
 
