@@ -81,11 +81,13 @@ padding-inline-start: 0px !important;
 }
 
 .fav-icon {
-    max-width:100%;
+  padding-top:20px;
+    width:30px;
     height:auto;
 }
 .logoheader {
-    max-width: 100%;
+    padding-top:20px;
+    width:60px;
     height: auto;
 }
 

@@ -27,7 +27,7 @@ session_start();
 					<div class="header_right">
 						<li>
 							<div class="logodiv">
-								<a href="index.php"><img src="img/logo.png" class="logoheader" class="
+								<a href="index.php"><img src="img/explore.png" class="logoheader" class="
 								<?php 
 								// current or '' because it is the Index page
 								echo($currentPage == 'index.php' || $currentPage == '') ? 'activelink' :''?>"> </a>
@@ -62,7 +62,7 @@ session_start();
 						
 						<li>
 							<div class="fav-div">
-								<a href="favorite-destinations.php"><img src="img/favorite-icon.png" class="fav-icon" class="
+								<a href="favorite-destinations.php"><img src="img/heart.png" class="fav-icon" class="
 								<?php
 								echo ($currentPage == 'favorite-destinations.php' )?'activelink' :''
 								?>"> </a>
