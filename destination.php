@@ -5,12 +5,18 @@
 
 <?php 
 
+$loggedin = "false";
 
 $DestID = $_GET['link'];
-$UserID = $_SESSION['UserID'];
-$SavedDest = ifSaved($DestID,$_SESSION['UserID']);
+if (isset($_SESSION['UserID'])){
+    $UserID = $_SESSION['UserID'];
+    $SavedDest = ifSaved($DestID,$UserID);}
 
-  if($_SESSION["loggedin"] === "true"){
+if (isset($_SESSION['loggedin'])){
+    $loggedin = $_SESSION['loggedin'];
+  }
+
+  if($loggedin === "true"){
     if($SavedDest == 0){
         echo "<form class='LogOutButt' action='' method='POST'>" ;
         echo "<input type='submit' name='saveDest' value='Save Destination'>";

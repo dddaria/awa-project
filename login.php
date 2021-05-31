@@ -1,6 +1,6 @@
 <?php include('header.php');?>
 
-
+<main>
 <?php
 	if(isset($_SESSION["loggedin"])){
 		if($_SESSION["loggedin"] === "true"){
@@ -74,7 +74,7 @@
 
 
 
-
+</main>
 
 
 

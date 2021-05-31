@@ -425,7 +425,7 @@ text-transform: uppercase;
 }
 
 .LoginForm input[type=text]{
-  width: 50%;
+  width: 62%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -436,7 +436,7 @@ text-transform: uppercase;
 }
 
 .LoginForm input[type=password] {
-  width: 50%;
+  width: 62%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
