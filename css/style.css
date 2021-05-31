@@ -61,6 +61,8 @@ header {
 }
 .activelink{
     border-bottom:#658b6f !important;
+    text-underline-offset: 4px;
+    text-decoration: underline !important;
 }
 /* .header_right{
     padding-right: 4vw;

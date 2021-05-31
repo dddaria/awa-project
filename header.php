@@ -1,6 +1,8 @@
 <?php
 session_start();
 ?>
+ <?php include ('config.php'); ?>
+<?php include ('connect.php'); ?>
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +41,7 @@ session_start();
 						<li>
 							<h1><a href="popular-destinations.php" class="<?php
 							echo ($currentPage == 'popular-destinations.php')?'activelink' :''
-							?>">Popular </a> </h1>
+							?>"> Popular </a> </h1>
 						</li>
 					
 						<li>
@@ -92,5 +94,4 @@ session_start();
 				</ol>
 			</div> <!-- end of header div -->
 		</header>
-<?php include ('config.php'); ?>
-<?php include ('connect.php'); ?>
+

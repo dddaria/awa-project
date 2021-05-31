@@ -1,8 +1,6 @@
 <?php include('header.php');  ?>
 
 
-  
-
 <?php 
 
 $loggedin = "false";
@@ -43,22 +41,8 @@ if (isset($_SESSION['loggedin'])){
 
         }
     }
-
-
-        
+ 
 }
-
-
-
-  
-
-
-         
-    
-
-       
-
-
     
     $sql = "SELECT d.Name, d.Description, d.Picture, c.Name, co.Name, con.Name, d.ViewedIndex
             FROM Destination AS d
@@ -192,20 +176,7 @@ if (isset($_SESSION['loggedin'])){
 <hr class="destination-divider">
     
   <div class="comments-div">
-        <?php
-            // if($_SESSION["loggedin"] === "true"){    
-            //     echo '<form class="comment-form" action="" method="POST">';
-                            
-            //     echo   '<h3> Write a comment</h3>';
-            //     echo       '<input type="text" name="comName" placeholder="Your Name">';
-                        
-            //     echo     '<input type="email" name="comEmail" placeholder="Email">';
-                
-            //     echo     '<textarea class="commment_textarea"name="comment"placeholder="Type your comment here"> </textarea>';
-                    
-            //     echo      '<button type="submit" value="Submit" name="comSubmit">Submit</button>
-            //         </form>';
-        ?>
+
             <form class="comment-form" action="" method="POST">
                             
                 <h3> Write a comment</h3>

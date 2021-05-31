@@ -66,8 +66,7 @@
         <div class="profile-img-div">
             <img class="profile-img" src="img/person.png">
         </div> 
-        <!-- <p class="change-profile-img" ><a>Change profile picture</a></p> -->
-    </div>
+          </div>
 </div> 
  
 
