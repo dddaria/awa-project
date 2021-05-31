@@ -41,6 +41,7 @@ session_start();
 							echo ($currentPage == 'popular-destinations.php')?'activelink' :''
 							?>">Popular </a> </h1>
 						</li>
+					
 						<li>
 							<h1><a href="all-destinations.php"  class="<?php echo($currentPage == 'all-destinations.php') ? 'activelink' :''?>">All Destinations</a></h1>
 						</li>
