@@ -49,7 +49,7 @@
 				}else if($uname === $Username && $pass === $Password && $Usertype === "Admin"){ //kollar så att input är lika med databasen. Admin?
 					
 					$_SESSION["loggedin"] = "true";
-					$_SESSION["UserName"] = $Username;
+					$_SESSION["UserID"] = $UserID;
 					$_SESSION["UserType"] = $Usertype;
 					$_SESSION["UserIP"] = $_SERVER['REMOTE_ADDR'];
 
@@ -60,7 +60,7 @@
 				}else if($uname === $Username && $pass === $Password && $Usertype === "Normal"){ 
 				 	
 					$_SESSION["loggedin"] = "true";
-					$_SESSION["UserName"] = $Username;
+					$_SESSION["UserID"] = $UserID;
 					$_SESSION["UserType"] = $UserType;
 					$_SESSION["UserIP"] = $_SERVER['REMOTE_ADDR'];
 

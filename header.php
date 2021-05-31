@@ -69,9 +69,22 @@ session_start();
 								</div>
 							</li>
 						<li>
-							<h1><a href="login.php" class="<?php
-							echo ($currentPage == 'login.php' )?'activelink' :''
-							?>">Log in</a></h1>
+							<?php 
+							if (isset($_SESSION['loggedin'])){ 
+							if($_SESSION['loggedin']=== "true"){
+								echo "<h1><a href='account.php' class='";
+								echo ($currentPage == 'account.php' )?'activelink' :'';
+								echo "'>My Account</a></h1>";
+							}}else{
+								echo "<h1><a href='login.php' class='";
+								echo ($currentPage == 'login.php' )?'activelink' :'';
+								echo "'>Log in</a></h1>";	
+							
+							}
+						
+
+							?>
+							
 						</li>
 						
 					</div>

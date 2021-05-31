@@ -27,9 +27,9 @@
 ?>
    <?php
    
-   $user = ($_SESSION["UserName"]);
+   $user = $_SESSION["UserID"];
 
-    $sql = "SELECT Username, Password, Email, Fullname FROM User WHERE Username ='$user'";
+    $sql = "SELECT Username, Password, Email, Fullname FROM User WHERE UserID ='$user'";
         $stmt = $dbConn->prepare($sql);
         $stmt->bind_result($username, $password, $email, $fullname);
         $stmt->execute();

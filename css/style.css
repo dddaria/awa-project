@@ -5,6 +5,7 @@ body {
 	width:100%;
 	margin: 0 auto;
 	font-family: 'Bebas-Neue', sans-serif;
+
 }
 
 main {
@@ -12,6 +13,8 @@ main {
 	min-width: 300px;
   width: 80%;
   margin-top: 50px;
+  min-height: 500px;
+  display: block;
 }
 
 a {
