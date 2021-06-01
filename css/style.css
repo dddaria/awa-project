@@ -42,7 +42,7 @@ header {
     width: 80%;
     padding-left: 0;
     text-align: center;
-    padding-top: 15px;
+    
 }
 
 .top-nav li {
@@ -327,7 +327,7 @@ text-transform: uppercase;
 #randomize-btn {
     padding: 15px 20px;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 50px;
     line-height: 1.4em;
     border: none;
     border-radius: 8px;
@@ -593,7 +593,20 @@ input[type=submit]:hover {
 a.newDestButt{
   font-size:13px;
 }
+/**************About US**************/
 
+.UsContainer{
+  margin:auto;
+  width:60%;
+}
+.usImg{
+  max-width:100%;
+}
+
+.UsText{
+  
+  padding-bottom:30px;
+}
 
 /******** Footer ************/
 footer {
