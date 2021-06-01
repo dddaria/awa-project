@@ -48,6 +48,8 @@ header {
 .top-nav li {
     text-transform: uppercase;
     display: inline-block;
+    vertical-align: top;
+    margin-top:30px;
 }
 
 .top-nav  h1 {
@@ -66,20 +68,22 @@ header {
 }
 
 .fav-icon {
-  padding-top:20px;
-    width:30px;
-    height:auto;
+       width: 30px;
+    max-height: 30px;
+    object-fit: contain;
+    margin-top: -10px;
 }
 .logoheader {
-    padding-top:20px;
-    width:60px;
-    height: auto;
+  max-height: 45px;
 }
 
 .logodiv {
     width:5vw;
     float: left;
     padding-right: 30px;
+    max-height: 30px;
+    object-fit: cover;
+    margin-top: -15px;
 }
 
 .fav-div {
