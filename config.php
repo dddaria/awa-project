@@ -1,5 +1,4 @@
-<?php 
-include ('connect.php');
+<?php include ('connect.php');
 
 $currentPage = basename($_SERVER['PHP_SELF']);
 
@@ -88,26 +87,6 @@ function setComment($destID, $comName, $comEmail, $comment) {
         echo $dbConn -> error;
     }
 };
-// function setComments($dbConn){ // $comName, $comEmail, $comment??
-//     //if the submit button for comment is clicked this info is inserted into the database
-//     if (isset($_POST['comSubmit'])){
-//         // if(empty($comName) || empty($comEmail) || empty($comment)) {
-//         //     echo "<p class='warning'> Be sure that you have filled in every field!s</p>";
-//         // }
-//         // else  {
-//             $comName = $_POST['comName'];
-//             $comEmail = $_POST['comEmail'];
-//             $comment = $_POST['comment'];
-    
-//             $sql = "INSERT INTO Comment (Name, Email, Comment) VALUES ('$comName', '$comEmail', '$comment')";
-//             $result = $dbConn->query($sql);
-    
-//             echo "<p> Thank you for commenting!</p>";
-//         // }
-        
-//      }  
-// };
-
 
 function getComments($dbConn){
 $sql ="SELECT * FROM Comments";
@@ -138,8 +117,6 @@ function getRandomDestination() {
     $randomDest = rand(0, count($allDest)-1);
     return $allDest[$randomDest];
 }
-
-
 
 function callAPI($url) {
     //starting the call
